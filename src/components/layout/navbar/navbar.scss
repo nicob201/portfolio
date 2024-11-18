@@ -1,0 +1,59 @@
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &.scrolled {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.500);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        color: var(--color2);
+    }
+
+    .nav-link {
+        color: var(--color3) !important;
+        margin-right: 1rem;
+        font-family: Montserrat, sans-serif;
+        text-transform: uppercase;
+
+        &:hover {
+            color: var(--color2) !important;
+        }
+
+    }
+
+    .navbar-toggler {
+        border-color: var(--color4);
+    }
+
+    #dark-mode-toggle {
+        cursor: pointer;
+        color: var(--color1);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--color1);
+        }
+    }
+
+    .btn-dark-mode {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        z-index: 1050;
+
+        @media (max-width: 768px) {
+            top: 0.5rem;
+            transform: none;
+        }
+    }
+
+}

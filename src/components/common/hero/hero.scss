@@ -1,0 +1,28 @@
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873946/12980760_5096154-scaled_jqog7s.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .hero-content {
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}

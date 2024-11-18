@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&display=swap');
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* body {
+  padding-top: 56px; // para que no queden debajo del navbar los elementos
+} */
+
+// Paleta de colores
+:root {
+  --color1: #160c28ff;
+  --color2: #efcb68ff;
+  --color3: #e1efe6ff;
+  --color4: #aeb7b3ff;
+  --color5: #000411ff;
+  --color6: #CF5C36;
+}
