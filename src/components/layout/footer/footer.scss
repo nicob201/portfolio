@@ -1,0 +1,26 @@
+footer {
+    background-color: var(--color1); // Fondo del footer
+    color: var(--color4); // Color del texto general
+    padding: 1rem 0; // Espaciado adicional opcional
+  
+    .text-body-secondary {
+      color: var(--color4) !important; // Asegura el color de los textos secundarios
+  
+      &:hover {
+        color: var(--color4); // Color más claro al pasar el cursor (opcional)
+      }
+    }
+  
+    a {
+      color: var(--color4);
+      text-decoration: none;
+  
+      &:hover {
+        color: var(--color4); // Enlace más claro al hover
+      }
+    } 
+  }
+  
+  .background-nico {
+    background-color: var(--color1);
+  }

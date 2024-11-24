@@ -23,7 +23,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <nav className={`navbar navbar-expand-lg ${scrolled ? "scrolled" : ""}`}>
+    <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? "scrolled" : ""}`}>
       <div className="container-fluid position-relative">
         <button
           className="navbar-toggler"
