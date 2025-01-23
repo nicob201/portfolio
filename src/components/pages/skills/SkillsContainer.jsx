@@ -29,7 +29,7 @@ const SkillsContainer = () => {
   return (
     <section className="skills-section d-flex justify-content-center align-items-center">
       <div className="container-skills d-flex justify-content-center align-items-center">
-        {/* Columna de la izquierda */}
+        {/* Left column */}
         <div className="skills-left p-5 d-flex flex-column justify-content-center gap-1">
           <h2 className="skills-title">My Skills</h2>
           <p className="skills-subtitle">(I&#39;m learning more)</p>
@@ -37,7 +37,7 @@ const SkillsContainer = () => {
           <Button>View My Work</Button>
         </div>
 
-        {/* Columna de la derecha con skills */}
+        {/* Right column - skills */}
         <div className="skills-right">
             {skills.map((skill, index) => (
               <SkillItem key={index} Icon={skill.Icon} label={skill.label} />

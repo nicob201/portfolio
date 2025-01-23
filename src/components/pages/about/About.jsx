@@ -7,7 +7,7 @@ const About = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 text-end">
-            {/* Imagen circular */}
+            {/* Circular image */}
             <img
               src="https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873474/20240423_170639_1_qji49v.jpg"
               alt="Nicolas Boscasso"

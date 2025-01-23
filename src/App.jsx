@@ -3,6 +3,7 @@ import Navbar from "./components/layout/navbar/Navbar";
 import Footer from "./components/layout/footer/Footer";
 import About from "./components/pages/about/About";
 import SkillsContainer from "./components/pages/skills/SkillsContainer";
+import EducationContainer from "./components/pages/education/EducationContainer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <About />
       <SkillsContainer />
+      <EducationContainer />
       <Footer />
     </BrowserRouter>
   );

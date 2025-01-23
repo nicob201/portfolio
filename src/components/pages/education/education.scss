@@ -1,0 +1,66 @@
+.education-section {
+  padding: 6rem 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color3);
+
+  .container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .education-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .horizontal-row {
+      border: none;
+      max-width: 100%;
+      height: 5px;
+      background-color: var(--color2);
+      margin: 20px 0;
+    }
+
+    .education-items {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .education-item {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      gap: 100px;
+      padding: 1rem 0;
+
+      .education-left,
+      .education-right {
+        flex: 1;
+        max-width: 45%;
+        text-align: left;
+      }
+
+      .education-left {
+        .education-item-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+        }
+
+        .education-item-school {
+          font-size: 1rem;
+        }
+      }
+
+      .education-right {
+        .education-item-date {
+          font-size: 1rem;
+          color: var(--color1);
+        }
+      }
+    }
+  }
+}
