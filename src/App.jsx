@@ -5,6 +5,7 @@ import About from "./components/pages/about/About";
 import SkillsContainer from "./components/pages/skills/SkillsContainer";
 import EducationContainer from "./components/pages/education/EducationContainer";
 import ProjectsContainer from "./components/pages/myProjects/ProjectsContainer";
+import ContactSection from "./components/pages/contact/ContactContainer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <SkillsContainer />
       <EducationContainer />
       <ProjectsContainer />
+      <ContactSection />
       <Footer />
     </BrowserRouter>
   );

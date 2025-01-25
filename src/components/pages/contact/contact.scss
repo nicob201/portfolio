@@ -1,0 +1,77 @@
+.contact-section {
+    background-color: var(--color5);
+    padding: 1rem 0;
+
+    .content-wrapper {
+        max-width: 70%;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .left-column {
+        position: relative;
+        height: 100vh;
+
+        .background-image {
+            background-color: var(--color3);
+            background-image: url("https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873946/fondo-techno-digital-lineas-puntos-conexion_nixuc0.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .right-column {
+        background-color: var(--color3);
+        padding: 3rem;
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: var(--color6);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--color7);
+            margin-bottom: 2rem;
+        }
+
+        form .form-control {
+            background-color: var(#888686);
+            border: none;
+            border-radius: 0;
+        }
+
+        form .form-control:focus {
+            box-shadow: none;
+            border-color: var(--color6);
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #333;
+        }
+    }
+}
+
+.resume-download-icon {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 1rem;
+
+    svg {
+        width: 50px;
+        height: 50px;
+        color: var(--color7);
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    &:hover svg {
+        transform: scale(1.1);
+        color: var(--color6);
+    }
+}

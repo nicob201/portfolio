@@ -63,6 +63,11 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="#">
+                ES | EN
+              </Link>
+            </li>
           </ul>
         </div>
         <button className="btn btn-link nav-link" id="dark-mode-toggle">
