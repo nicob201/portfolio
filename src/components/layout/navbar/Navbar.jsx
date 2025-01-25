@@ -40,7 +40,7 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                Inicio
+                Home
               </Link>
             </li>
             <li className="nav-item">
@@ -50,17 +50,17 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/education">
-                Educacion
+                Education
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/projects">
-                Proyectos
+                Projects
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contact">
-                Contacto
+                Contact
               </Link>
             </li>
           </ul>
