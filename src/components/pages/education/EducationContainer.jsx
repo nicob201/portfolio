@@ -3,7 +3,7 @@ import educationItems from "./educationData";
 
 const EducationContainer = () => {
   return (
-    <section className="education-background education-section">
+    <section id="education" className="education-background education-section">
       <div className="container d-flex flex-column align-items-center">
         {/* Title */}
         <div className="text-center">
@@ -35,6 +35,7 @@ const EducationContainer = () => {
                       href={item.pdfLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Download PDF for ${item.title}`}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

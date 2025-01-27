@@ -2,8 +2,15 @@ import Button from "../../common/button/Button";
 import "./about.scss";
 
 const About = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="about hero-container horizontal-gradient">
+    <section id="home" className="about hero-container horizontal-gradient">
       <div className="container">
         <div className="row">
           <div className="col-md-6 text-end">
@@ -24,7 +31,7 @@ const About = () => {
               innovative digital solutions. Feel free to explore my portfolio
               and discover me!
             </p>
-            <Button>Let&#39;s talk!</Button>
+            <Button onClick={scrollToContact}>Let&#39;s talk!</Button>
           </div>
         </div>
       </div>

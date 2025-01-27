@@ -45,7 +45,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="contact-section">
+    <section id="contact" className="contact-section">
       <div className="container-fluid">
         <div className="content-wrapper row">
           {/* Left column */}

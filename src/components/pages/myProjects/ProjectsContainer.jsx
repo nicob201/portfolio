@@ -4,7 +4,7 @@ import projectsData from "./projectsData";
 
 const ProjectsContainer = () => {
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <div className="container-fluid d-flex flex-column align-items-center">
         {/* Title */}
         <div className="text-center">

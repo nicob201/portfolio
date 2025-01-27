@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import "./navbar.scss";
 import { useEffect, useState } from "react";
-import { WiMoonAltWaningGibbous5 } from "react-icons/wi";
+//import { WiMoonAltWaningGibbous5 } from "react-icons/wi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -22,6 +21,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? "scrolled" : ""}`}>
       <div className="container-fluid position-relative">
@@ -39,40 +39,42 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <a className="nav-link" href="#home">
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/skills">
+              <a className="nav-link" href="#skills">
                 Skills
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/education">
+              <a className="nav-link" href="#education">
                 Education
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/projects">
+              <a className="nav-link" href="#projects">
                 Projects
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <a className="nav-link" href="#contact">
                 Contact
-              </Link>
+              </a>
             </li>
-            <li className="nav-item">
+            {/* Language Selector */}
+            {/* <li className="nav-item">
               <Link className="nav-link" to="#">
                 ES | EN
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
-        <button className="btn btn-link nav-link" id="dark-mode-toggle">
+        {/* Dark Mode Toggle */}
+        {/* <button className="btn btn-link nav-link" id="dark-mode-toggle">
           <WiMoonAltWaningGibbous5 size={"1.5rem"} />
-        </button>
+        </button> */}
       </div>
     </nav>
   );

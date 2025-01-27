@@ -1,26 +1,43 @@
-footer {
-    background-color: var(--color1); // Fondo del footer
-    color: var(--color4); // Color del texto general
-    padding: 1rem 0; // Espaciado adicional opcional
-  
-    .text-body-secondary {
-      color: var(--color4) !important; // Asegura el color de los textos secundarios
-  
-      &:hover {
-        color: var(--color4); // Color más claro al pasar el cursor (opcional)
-      }
-    }
-  
-    a {
-      color: var(--color4);
+.footer {
+  background-color: var(--color1);
+  color: var(--color7);
+  padding: 1rem 0;
+
+  .copyright {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    color: var(--color7);
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color6);
       text-decoration: none;
-  
-      &:hover {
-        color: var(--color4); // Enlace más claro al hover
-      }
-    } 
+    }
+
+    svg {
+      width: 1.5em;
+      height: 1.5em;
+    }
   }
-  
-  .background-nico {
-    background-color: var(--color1);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
   }
+
+  .text-md-start {
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  .justify-content-md-end {
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+  }
+}
