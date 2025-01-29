@@ -42,7 +42,7 @@ Bienvenido a mi portfolio personal desarrollado con **React y Vite**.
 
 ## 🌍 Deploy
 
-### Este proyecto está desplegado en **Vercel**. Puedes verlo en línea aquí: [Mi Portfolio](https://miportfolio.vercel.app/)
+### Este proyecto está desplegado en **Vercel**. Puedes verlo en línea aquí: [Mi Portfolio]()
 
 ## 📬 Contacto
 

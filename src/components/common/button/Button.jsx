@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Button.scss";
+import "./button.scss";
 import { IoMdArrowDropright } from "react-icons/io";
 
 const Button = ({ children, ...rest }) => {
