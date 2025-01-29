@@ -114,7 +114,7 @@ const ContactSection = () => {
                 <strong>OR... DOWNLOAD MY RESUME HERE!</strong>
               </p>
               <a
-                href="https://drive.google.com/uc?export=download&id=1D5nSzoqMSFNIJkvZbIhqLGslefR2Kcse"
+                href="https://drive.google.com/file/d/1cFLKL7rdTMFbP9m_PP5EobegF4L9bJL6/view?usp=drive_link"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
