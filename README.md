@@ -1,6 +1,6 @@
 # 🎨 Mi Portfolio Personal
 
-Bienvenido a mi portfolio personal desarrollado con **React y Vite**. Este proyecto es una muestra de mi trabajo, habilidades y proyectos destacados.
+Bienvenido a mi portfolio personal desarrollado con **React y Vite**.
 
 ## 🚀 Tecnologías Utilizadas
 
@@ -46,7 +46,7 @@ Bienvenido a mi portfolio personal desarrollado con **React y Vite**. Este proye
 
 ## 📬 Contacto
 
-Si quieres ponerte en contacto conmigo, puedes escribirme a través del formulario de contacto en el sitio o en mis redes sociales:
+Podes escribirme a través del formulario de contacto en el sitio o en mis redes sociales:
 
 - 📧 Email: [nicolasboscasso@gmail.com](mailto:nicolasboscasso@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/nicolas-boscasso](https://www.linkedin.com/in/nicolas-boscasso/)
