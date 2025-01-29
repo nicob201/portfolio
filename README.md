@@ -8,7 +8,7 @@ Bienvenido a mi portfolio personal desarrollado con **React y Vite**. Este proye
 - **SCSS** para estilos personalizados 🎨
 - **Bootstrap V5** para una interfaz moderna 📐
 - **EmailJS** para la gestión de emails 📧
-- **React Icons** para iconografía 🖌️
+- **React Icons** & **Bootstrap Icons** para iconografía 🖌️
 
 ## 📌 Características
 
