@@ -1,53 +1,93 @@
 .about {
-    color: var(--color3);
-
-    .row {
-        align-items: flex-start;
-
-        .img-fluid {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--color2);
-            font-family: "Anta", sans-serif;
-            text-transform: uppercase;
-        }
-
-        h2 {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            letter-spacing: 3px;
-            font-family: "Anta", sans-serif;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            text-align: start;
-        }
-
-        .horizontal-row {
-            border: none;
-            height: 5px;
-            background-color: var(--color2);
-            margin: 20px 0;
-        }
-    }
+  width: 100%;
+  height: 100vh;
+  color: var(--color3);
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
+    url("https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873946/12980760_5096154-scaled_jqog7s.jpg");
 }
 
-.hero-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
-        url("https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873946/12980760_5096154-scaled_jqog7s.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-content: center;
+.about-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* IMAGEN */
+.about-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-name {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color2);
+}
+
+.about-title {
+  font-size: 4rem;
+  margin: 1rem 0;
+  font-family: "Anta", sans-serif;
+  text-transform: uppercase;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.horizontal-row {
+  width: 100px;
+  height: 4px;
+  background-color: var(--color2);
+  border: none;
+  margin: 1.5rem 0;
+}
+
+/* = MOBILE = */
+@media (max-width: 768px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-image {
+    justify-content: center;
+  }
+
+  .about-text {
+    align-items: center;
+  }
+
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .about-text p {
+    max-width: 100%;
+  }
 }

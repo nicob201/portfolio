@@ -3,32 +3,29 @@ import educationItems from "./educationData";
 
 const EducationContainer = () => {
   return (
-    <section id="education" className="education-background education-section">
+    <section id="education" className="education-section">
       <div className="container d-flex flex-column align-items-center">
-        {/* Title */}
         <div className="text-center">
           <h2 className="education-title">Education</h2>
           <div className="horizontal-row"></div>
         </div>
+
         <div className="education-items">
           {educationItems.map((item, index) => (
             <div
-              className="education-item d-flex border-bottom border-secondary-subtle"
+              className="education-item"
               key={index}
             >
-              {/* Left Column */}
-              <div className="education-left flex-1">
+              <div className="education-left">
                 <h3 className="education-item-title">{item.title}</h3>
                 <p className="education-item-school">{item.school}</p>
               </div>
 
-              {/* Date column */}
-              <div className="education-right flex-1">
-                <p className="education-item-date">{item.date} </p>
+              <div className="education-right">
+                <p className="education-item-date">{item.date}</p>
               </div>
 
-              {/* Doc column */}
-              <div className="education-right flex-1">
+              <div className="education-right">
                 <p className="education-item-date">
                   {item.pdfLink ? (
                     <a

@@ -1,4 +1,4 @@
-/* Skill's icons */
+/* SKILL ICON */
 import {
     SiJavascript,
     SiReact,
@@ -12,7 +12,7 @@ import {
     SiWordpress,
 } from "react-icons/si";
 
-/* Skills */
+/* SKILLS */
 export const skillsData = [
     { Icon: SiJavascript, label: "JavaScript" },
     { Icon: SiReact, label: "React.js" },

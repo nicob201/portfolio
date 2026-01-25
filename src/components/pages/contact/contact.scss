@@ -1,77 +1,169 @@
 .contact-section {
-    background-color: var(--color5);
-    padding: 1rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
 
-    .content-wrapper {
-        max-width: 70%;
+  .container-fluid {
+    padding: 0;
+  }
+
+  .row.g-0 {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  // Columna Izquierda (Imagen y Datos)
+  .left-column {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                      url("https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873946/12980760_5096154-scaled_jqog7s.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    color: white;
+
+    .info-block {
+      text-align: left;
+
+      a {
+          text-decoration: none;
+          color: white;
+          transition: opacity 0.3s ease;
+        }
+
+        span {
+            font-size: 1.6rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+      p {
+        margin-bottom: 2rem;
+        
+        strong {
+          color: var(--color2);
+          display: block;
+          font-size: 0.8rem;
+          letter-spacing: 1px;
+          margin-bottom: 0.5rem;
+        }
+
+        span {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // Columna Derecha (Formulario)
+  .right-column {
+    background-color: #f0f4f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+
+    .form-container {
+      width: 100%;
+      max-width: 500px;
+
+      .contact-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a2a2d;
+        margin-bottom: 2rem;
+      }
+
+      .form-control {
+        border: none;
+        border-radius: 0;
+        padding: 0.8rem 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        background-color: white;
+
+        &::placeholder {
+          color: #adb5bd;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgba(239, 203, 104, 0.25);
+        }
+      }
+
+      textarea.form-control {
+        resize: none;
+      }
+
+      // Estilo para el botón de enviar
+      .btn-send {
         width: 100%;
-        margin: 0 auto;
-    }
+        background-color: #f2c94c;
+        border: none;
+        padding: 1rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 1rem;
+        color: #1a1a1a;
+        transition: background 0.3s;
 
-    .left-column {
-        position: relative;
-        height: 100vh;
-
-        .background-image {
-            background-color: var(--color3);
-            background-image: url("https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873946/fondo-techno-digital-lineas-puntos-conexion_nixuc0.jpg");
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            width: 100%;
+        &:hover {
+          background-color: #e2b93c;
         }
-    }
+      }
 
-    .right-column {
-        background-color: var(--color3);
-        padding: 3rem;
-
-        .contact-info {
-            font-size: 0.9rem;
-            color: var(--color6);
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--color7);
-            margin-bottom: 2rem;
-        }
-
-        form .form-control {
-            background-color: var(#888686);
-            border: none;
-            border-radius: 0;
-        }
-
-        form .form-control:focus {
-            box-shadow: none;
-            border-color: var(--color6);
-        }
+      .resume-section {
+        margin-top: 3rem;
+        text-align: center;
 
         p {
-            font-size: 0.9rem;
-            color: #333;
+          font-size: 0.75rem;
+          font-weight: bold;
+          color: #6c757d;
+          letter-spacing: 1px;
+          margin-bottom: 1rem;
         }
+
+        .resume-download-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 50px;
+          height: 50px;
+          border: 2px solid #f2c94c;
+          border-radius: 8px;
+          color: #f2c94c;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #f2c94c;
+            color: white;
+            transform: translateY(-3px);
+          }
+
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
     }
+  }
 }
 
-.resume-download-icon {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: 1rem;
-
-    svg {
-        width: 50px;
-        height: 50px;
-        color: var(--color7);
-        transition: transform 0.3s ease, color 0.3s ease;
+// Mobile Responsive
+@media (max-width: 768px) {
+  .contact-section {
+    .left-column {
+      padding: 3rem 2rem;
+      min-height: 40vh;
     }
-
-    &:hover svg {
-        transform: scale(1.1);
-        color: var(--color6);
+    .right-column {
+      padding: 3rem 1.5rem;
     }
+  }
 }

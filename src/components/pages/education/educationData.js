@@ -1,4 +1,4 @@
-// Education courses data
+// Education cursos
 const educationItems = [
     {
         title: "Higher Technical Degree in Programming",

@@ -1,48 +1,70 @@
 .carousel {
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
-    .carousel-inner {
-        display: flex;
-        align-items: center;
-    }
+  .carousel-inner {
+    align-items: center;
+  }
 
-    .carousel-indicators {
-        display: none;
-    }
+  .carousel-indicators {
+    display: none;
+  }
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    z-index: 10;
-
-    &.carousel-control-prev {
-        left: -50px;
-    }
-
-    &.carousel-control-next {
-        right: -50px;
-    }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 10;
 }
 
 .carousel-image {
-    max-width: 80%;
-    justify-items: right;
+  max-width: 80%;
 }
 
 .carousel-description {
-    max-width: 80%;
-    justify-items: left;
+  max-width: 80%;
 }
 
 .project-text {
-    color: var(--color3);
+  color: var(--color3);
+}
+
+/* = MOBILE = */
+@media (max-width: 767px) {
+  .carousel-item .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-image {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .carousel-description {
+    max-width: 100%;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+/* = DESKTOP = */
+@media (min-width: 768px) {
+  .carousel-control-prev {
+    left: -50px;
+  }
+
+  .carousel-control-next {
+    right: -50px;
+  }
 }
