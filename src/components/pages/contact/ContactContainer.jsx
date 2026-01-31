@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 import "./contact.scss";
 import { FiDownload } from "react-icons/fi";
 
@@ -10,6 +11,8 @@ const ContactSection = () => {
     message: "",
   });
   const [success, setSuccess] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const captchaRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -20,25 +23,35 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validar Captcha
+    const token = captchaRef.current.getValue();
+    if (!token) {
+      alert("Please complete the CAPTCHA to verify you are human :D");
+      return;
+    }
+
+    setIsSending(true);
+
     emailjs
       .send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
+        formData,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (response) => {
+        () => {
           setSuccess(true);
+          setIsSending(false);
           setFormData({ name: "", email: "", message: "" });
+          captchaRef.current.reset();
           setTimeout(() => setSuccess(false), 5000);
         },
         (error) => {
           console.log("FAILED...", error);
+          setIsSending(false);
+          alert("Opps! Something went wrong. Please try again later.");
         }
       );
   };
@@ -51,16 +64,19 @@ const ContactSection = () => {
           {/* LADO IZQUIERDO: Imagen e Info */}
           <div className="col-md-6 left-column">
             <div className="info-block">
-              <p>
+              <div className="info-item">
                 <strong>PHONE NUMBER</strong>
-                <a href="https://wa.me/5493513287771" target="_blank" rel="noopener noreferrer"><span>+5493513287771</span></a>
-              </p>
-              <p>
+                <a href="https://wa.me/5493513287771" target="_blank" rel="noopener noreferrer">
+                  <span>+54 9 3513287771</span>
+                </a>
+              </div>
+
+              <div className="info-item">
                 <strong>E-MAIL</strong>
                 <a href="mailto:nicoboscasso@gmail.com">
                   <span>nicoboscasso@gmail.com</span>
                 </a>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -98,8 +114,28 @@ const ContactSection = () => {
                   required
                 ></textarea>
 
-                <button type="submit" className="btn-send">
-                  SEND
+                {/* Contenedor del Captcha */}
+                <div className="captcha-wrapper">
+                  <ReCAPTCHA
+                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    ref={captchaRef}
+                    theme="light"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className={`btn-send ${isSending ? 'sending' : ''}`}
+                  disabled={isSending}
+                >
+                  {isSending ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      SENDING...
+                    </>
+                  ) : (
+                    "SEND"
+                  )}
                 </button>
               </form>
 
@@ -109,11 +145,10 @@ const ContactSection = () => {
                 </div>
               )}
 
-              {/* SECCION DESCARGA DE CV */}
               <div className="resume-section">
                 <p>OR... DOWNLOAD MY RESUME HERE!</p>
                 <a
-                  href="TU_LINK_DE_DRIVE_AQUÍ"
+                  href="https://drive.google.com/file/d/1cFLKL7rdTMFbP9m_PP5EobegF4L9bJL6/view?usp=sharing"
                   download
                   target="_blank"
                   rel="noopener noreferrer"

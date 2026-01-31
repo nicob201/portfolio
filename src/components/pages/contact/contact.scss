@@ -3,16 +3,10 @@
   display: flex;
   align-items: stretch;
 
-  .container-fluid {
-    padding: 0;
-  }
+  .container-fluid { padding: 0; }
+  .row.g-0 { margin: 0; min-height: 100vh; }
 
-  .row.g-0 {
-    margin: 0;
-    min-height: 100vh;
-  }
-
-  // Columna Izquierda (Imagen y Datos)
+  // Columna Izquierda
   .left-column {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -25,40 +19,34 @@
     color: white;
 
     .info-block {
-      text-align: left;
+      .info-item {
+        margin-bottom: 2.5rem;
 
-      a {
-          text-decoration: none;
-          color: white;
-          transition: opacity 0.3s ease;
-        }
-
-        span {
-            font-size: 1.6rem;
-            font-weight: 500;
-            display: inline-block;
-        }
-
-      p {
-        margin-bottom: 2rem;
-        
         strong {
-          color: var(--color2);
+          color: #f2c94c;
           display: block;
-          font-size: 0.8rem;
-          letter-spacing: 1px;
+          font-size: 0.85rem;
+          letter-spacing: 2px;
           margin-bottom: 0.5rem;
         }
 
-        span {
-          font-size: 1.5rem;
-          font-weight: 500;
+        a {
+          text-decoration: none;
+          color: white;
+          transition: opacity 0.3s ease;
+
+          span {
+            font-size: 1.6rem;
+            font-weight: 500;
+          }
+
+          &:hover { opacity: 0.7; }
         }
       }
     }
   }
 
-  // Columna Derecha (Formulario)
+  // Columna Derecha
   .right-column {
     background-color: #f0f4f1;
     display: flex;
@@ -82,23 +70,17 @@
         border-radius: 0;
         padding: 0.8rem 1rem;
         margin-bottom: 1rem;
-        font-size: 1rem;
-        background-color: white;
+        &:focus { box-shadow: 0 0 0 0.2rem rgba(242, 201, 76, 0.25); }
+      }
 
-        &::placeholder {
-          color: #adb5bd;
-        }
-
-        &:focus {
-          box-shadow: 0 0 0 0.2rem rgba(239, 203, 104, 0.25);
+      .captcha-wrapper {
+        margin: 1.5rem 0;
+        @media (max-width: 400px) {
+          transform: scale(0.85);
+          transform-origin: left;
         }
       }
 
-      textarea.form-control {
-        resize: none;
-      }
-
-      // Estilo para el botón de enviar
       .btn-send {
         width: 100%;
         background-color: #f2c94c;
@@ -106,64 +88,50 @@
         padding: 1rem;
         font-weight: bold;
         letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-top: 1rem;
         color: #1a1a1a;
-        transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
 
-        &:hover {
-          background-color: #e2b93c;
+        &:hover:not(:disabled) { background-color: #e2b93c; }
+
+        &.sending {
+          background-color: #d4ac2b;
+          cursor: not-allowed;
+          opacity: 0.8;
+        }
+
+        .spinner-border {
+          margin-right: 10px;
         }
       }
 
       .resume-section {
         margin-top: 3rem;
         text-align: center;
-
-        p {
-          font-size: 0.75rem;
-          font-weight: bold;
-          color: #6c757d;
-          letter-spacing: 1px;
-          margin-bottom: 1rem;
-        }
-
+        p { font-size: 0.75rem; font-weight: bold; color: #6c757d; }
         .resume-download-btn {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 50px;
-          height: 50px;
+          width: 50px; height: 50px;
           border: 2px solid #f2c94c;
           border-radius: 8px;
           color: #f2c94c;
           transition: all 0.3s ease;
-
-          &:hover {
-            background-color: #f2c94c;
-            color: white;
-            transform: translateY(-3px);
-          }
-
-          svg {
-            width: 24px;
-            height: 24px;
-          }
+          &:hover { background-color: #f2c94c; color: white; transform: translateY(-3px); }
         }
       }
     }
   }
 }
 
-// Mobile Responsive
+// Responsivo
 @media (max-width: 768px) {
   .contact-section {
-    .left-column {
-      padding: 3rem 2rem;
-      min-height: 40vh;
-    }
-    .right-column {
-      padding: 3rem 1.5rem;
-    }
+    flex-direction: column;
+    .left-column { padding: 3rem 2rem; min-height: 40vh; }
+    .right-column { padding: 3rem 1.5rem; }
   }
 }
