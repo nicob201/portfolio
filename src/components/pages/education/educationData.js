@@ -6,6 +6,13 @@ const educationItems = [
         date: "August 2024 - present",
     },
     {
+        title: "Diseño y Desarrollo Web Con WordPress",
+        school: "Mac Web",
+        date: "November 2025",
+        pdfLink:
+            "https://drive.google.com/file/d/1RMpPGTveVM5MiaJ93XsHuTqX0ZytELEA/view?usp=sharing",
+    },
+    {
         title: "React.js",
         school: "CoderHouse",
         date: "September 2024 - November 2024",
