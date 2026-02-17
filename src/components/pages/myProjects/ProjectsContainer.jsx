@@ -2,12 +2,15 @@ import "./projects.scss";
 import projectsData from "./projectsData";
 import Button from "../../common/button/Button";
 
+import { useLanguage } from "../../../context/LanguageContext";
+
 const ProjectsContainer = () => {
+  const { language, t } = useLanguage();
   return (
     <section id="projects" className="projects-section">
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="projects-title">Projects</h2>
+          <h2 className="projects-title">{t.projects.title}</h2>
           <div className="horizontal-row"></div>
         </div>
 
@@ -25,7 +28,11 @@ const ProjectsContainer = () => {
 
                 <div className="project-content">
                   <h5>{project.title}</h5>
-                  <p>{project.description}</p>
+                  <p>
+                    {typeof project.description === "object"
+                      ? project.description[language]
+                      : project.description}
+                  </p>
 
                   {project.demoLink && (
                     <a
@@ -33,7 +40,7 @@ const ProjectsContainer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button>View Demo</Button>
+                      <Button>{t.projects.viewDemo}</Button>
                     </a>
                   )}
                 </div>

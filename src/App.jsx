@@ -7,17 +7,21 @@ import EducationContainer from "./components/pages/education/EducationContainer"
 import ProjectsContainer from "./components/pages/myProjects/ProjectsContainer";
 import ContactSection from "./components/pages/contact/ContactContainer";
 
+import { LanguageProvider } from "./context/LanguageContext";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <About />
-      <SkillsContainer />
-      <EducationContainer />
-      <ProjectsContainer />
-      <ContactSection />
-      <Footer />
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Navbar />
+        <About />
+        <SkillsContainer />
+        <EducationContainer />
+        <ProjectsContainer />
+        <ContactSection />
+        <Footer />
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 

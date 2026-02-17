@@ -4,7 +4,10 @@ import ReCAPTCHA from "react-google-recaptcha";
 import "./contact.scss";
 import { FiDownload } from "react-icons/fi";
 
+import { useLanguage } from "../../../context/LanguageContext";
+
 const ContactSection = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,7 +30,7 @@ const ContactSection = () => {
     // Validar Captcha
     const token = captchaRef.current.getValue();
     if (!token) {
-      alert("Please complete the CAPTCHA to verify you are human :D");
+      alert(t.contact.errorMsg);
       return;
     }
 
@@ -51,7 +54,9 @@ const ContactSection = () => {
         (error) => {
           console.log("FAILED...", error);
           setIsSending(false);
-          alert("Opps! Something went wrong. Please try again later.");
+          console.log("FAILED...", error);
+          setIsSending(false);
+          alert(t.contact.errorMsg);
         }
       );
   };
@@ -65,14 +70,14 @@ const ContactSection = () => {
           <div className="col-md-6 left-column">
             <div className="info-block">
               <div className="info-item">
-                <strong>PHONE NUMBER</strong>
+                <strong>{t.contact.phoneLabel}</strong>
                 <a href="https://wa.me/5493513287771" target="_blank" rel="noopener noreferrer">
                   <span>+54 9 3513287771</span>
                 </a>
               </div>
 
               <div className="info-item">
-                <strong>E-MAIL</strong>
+                <strong>{t.contact.emailLabel}</strong>
                 <a href="mailto:nicoboscasso@gmail.com">
                   <span>nicoboscasso@gmail.com</span>
                 </a>
@@ -83,14 +88,14 @@ const ContactSection = () => {
           {/* LADO DERECHO: Formulario */}
           <div className="col-md-6 right-column">
             <div className="form-container">
-              <h2 className="contact-title">Get in touch!</h2>
+              <h2 className="contact-title">{t.contact.title}</h2>
 
               <form onSubmit={handleSubmit}>
                 <input
                   type="text"
                   name="name"
                   className="form-control"
-                  placeholder="Name"
+                  placeholder={t.contact.form.namePlaceholder}
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -99,7 +104,7 @@ const ContactSection = () => {
                   type="email"
                   name="email"
                   className="form-control"
-                  placeholder="Enter your email here"
+                  placeholder={t.contact.form.emailPlaceholder}
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -107,7 +112,7 @@ const ContactSection = () => {
                 <textarea
                   name="message"
                   className="form-control"
-                  placeholder="Your message here"
+                  placeholder={t.contact.form.messagePlaceholder}
                   rows="5"
                   value={formData.message}
                   onChange={handleChange}
@@ -131,22 +136,22 @@ const ContactSection = () => {
                   {isSending ? (
                     <>
                       <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                      SENDING...
+                      {t.contact.form.sendingBtn}
                     </>
                   ) : (
-                    "SEND"
+                    t.contact.form.sendBtn
                   )}
                 </button>
               </form>
 
               {success && (
                 <div className="alert alert-success mt-3" role="alert">
-                  Message sent! I'll contact you soon!
+                  {t.contact.successMsg}
                 </div>
               )}
 
               <div className="resume-section">
-                <p>OR... DOWNLOAD MY RESUME HERE!</p>
+                <p>{t.contact.resumeCta}</p>
                 <a
                   href="https://drive.google.com/file/d/1cFLKL7rdTMFbP9m_PP5EobegF4L9bJL6/view?usp=sharing"
                   download
