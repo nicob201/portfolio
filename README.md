@@ -14,8 +14,6 @@ Bienvenido a mi portfolio personal desarrollado con **React y Vite**.
 
 🚧 Dark Mode en progreso
 
-🚧 Version en Español en progreso
-
 ## 📸 Capturas de Pantalla
 
 ![Image](https://github.com/user-attachments/assets/3f6ac2ae-0695-4c8a-bc07-6cd1d428682c)
