@@ -1,7 +1,9 @@
 import "./navbar.scss";
 import { useEffect, useState } from "react";
+import { useLanguage } from "../../../context/LanguageContext";
 
 const Navbar = () => {
+  const { language, toggleLanguage, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,11 +32,16 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
-            <li className="nav-item"><a className="nav-link" href="#skills">Skills</a></li>
-            <li className="nav-item"><a className="nav-link" href="#education">Education</a></li>
-            <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+            <li className="nav-item"><a className="nav-link" href="#home">{t.navbar.home}</a></li>
+            <li className="nav-item"><a className="nav-link" href="#skills">{t.navbar.skills}</a></li>
+            <li className="nav-item"><a className="nav-link" href="#education">{t.navbar.education}</a></li>
+            <li className="nav-item"><a className="nav-link" href="#projects">{t.navbar.projects}</a></li>
+            <li className="nav-item"><a className="nav-link" href="#contact">{t.navbar.contact}</a></li>
+            <li className="nav-item">
+              <button className="btn nav-link" onClick={toggleLanguage}>
+                {language === "en" ? "ES" : "EN"}
+              </button>
+            </li>
           </ul>
         </div>
       </div>

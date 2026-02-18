@@ -1,28 +1,34 @@
 import "./education.scss";
 import educationItems from "./educationData";
 
+import { useLanguage } from "../../../context/LanguageContext";
+
 const EducationContainer = () => {
+  const { language, t } = useLanguage();
   return (
     <section id="education" className="education-section">
       <div className="container d-flex flex-column align-items-center">
         <div className="text-center">
-          <h2 className="education-title">Education</h2>
+          <h2 className="education-title">{t.education.title}</h2>
           <div className="horizontal-row"></div>
         </div>
 
         <div className="education-items">
           {educationItems.map((item, index) => (
-            <div
-              className="education-item"
+            <div className="education-item"
               key={index}
             >
               <div className="education-left">
-                <h3 className="education-item-title">{item.title}</h3>
+                <h3 className="education-item-title">
+                  {typeof item.title === "object" ? item.title[language] : item.title}
+                </h3>
                 <p className="education-item-school">{item.school}</p>
               </div>
 
               <div className="education-right">
-                <p className="education-item-date">{item.date}</p>
+                <p className="education-item-date">
+                  {typeof item.date === "object" ? item.date[language] : item.date}
+                </p>
               </div>
 
               <div className="education-right">
@@ -44,7 +50,7 @@ const EducationContainer = () => {
                       </svg>
                     </a>
                   ) : (
-                    <span className="education-item-status">In Progress</span>
+                    <span className="education-item-status">{t.education.inProgress}</span>
                   )}
                 </p>
               </div>

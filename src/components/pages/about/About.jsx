@@ -1,7 +1,10 @@
 import Button from "../../common/button/Button";
 import "./about.scss";
 
+import { useLanguage } from "../../../context/LanguageContext";
+
 const About = () => {
+  const { t } = useLanguage();
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -22,20 +25,17 @@ const About = () => {
         <div className="about-text">
           <span className="about-name">Nicolas Boscasso</span>
 
-          <h1 className="about-title">
-            FullStack <br /> Developer
+          <h1 className="about-title" style={{ whiteSpace: "pre-line" }}>
+            {t.about.title}
           </h1>
 
           <div className="horizontal-row"></div>
 
           <p>
-            Welcome! I'm a web developer specializing in creating dynamic and
-            efficient websites. Through my code, I turn challenges into
-            innovative digital solutions. Feel free to explore my portfolio and
-            discover me!
+            {t.about.description}
           </p>
 
-          <Button onClick={scrollToContact}>Let's talk!</Button>
+          <Button onClick={scrollToContact}>{t.about.button}</Button>
         </div>
       </div>
     </section>
