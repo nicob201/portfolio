@@ -29,10 +29,17 @@
   margin: 15px;
 }
 
-.project-image img {
+.project-image {
   width: 100%;
-  height: auto;
-  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 }
 
 .project-content {

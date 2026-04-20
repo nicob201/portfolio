@@ -15,8 +15,8 @@ const ProjectsContainer = () => {
         </div>
 
         <div className="row g-4">
-          {projectsData.map((project) => (
-            <div key={project.id} className="col-12 col-md-6 col-lg-4">
+          {projectsData.map((project, index) => (
+            <div key={`${project.title}-${index}`} className="col-12 col-md-6 col-lg-4">
               <div className="project-card h-100">
                 <div className="project-image">
                   <img

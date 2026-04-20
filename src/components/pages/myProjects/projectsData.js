@@ -1,7 +1,6 @@
 // Projects data
 const projectsData = [
   {
-    id: 1,
     title: "Backend API - Node.js",
     description: {
       en: "Complete Backend API Restfull for ecommerce, built with Node.js and MongoDB",
@@ -12,7 +11,16 @@ const projectsData = [
     demoLink: "https://github.com/nicob201/backend_API_ecommerce.git",
   },
   {
-    id: 2,
+    title: "Landing Page React.js",
+    description: {
+      en: "Landing page built with React.js",
+      es: "Landing page construida con React.js",
+    },
+    image:
+      "https://res.cloudinary.com/dl73hi4ir/image/upload/v1776715294/aiLanding_h43yga.jpg",
+    demoLink: "https://landing-ebook-psi.vercel.app/",
+  },
+  {
     title: "Ecommerce React.js",
     description: {
       en: "Ecommerce Frontend built with React.js",
@@ -23,7 +31,6 @@ const projectsData = [
     demoLink: "https://ecommerce-nico-boscasso.vercel.app/",
   },
   {
-    id: 3,
     title: "JavaScript Quizz",
     description: {
       en: "Los Simpson Quizz built with JavaScript",
@@ -34,7 +41,6 @@ const projectsData = [
     demoLink: "https://nicob201.github.io/entrega-final-JS-BOSCASSO/",
   },
   {
-    id: 4,
     title: "Cakery Page",
     description: {
       en: "Simple page built with HTML5 and CSS3",
@@ -45,7 +51,6 @@ const projectsData = [
     demoLink: "https://nicob201.github.io/Proyecto_Cakery/",
   },
   {
-    id: 5,
     title: "Indigo Shop",
     description: {
       en: "Web store built with WordPress & Elementor",
@@ -56,7 +61,6 @@ const projectsData = [
     demoLink: "https://indigoshop.pixerum.com/",
   },
   {
-    id: 6,
     title: "Lumident Web",
     description: {
       en: "Professional website built with WordPress & Elementor",
