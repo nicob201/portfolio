@@ -27,7 +27,7 @@ const projectsData = [
       es: "Frontend Ecommerce construido con React.js",
     },
     image:
-      "https://res.cloudinary.com/dl73hi4ir/image/upload/v1737763822/react-ecommerce_zdreso.png",
+      "https://res.cloudinary.com/dl73hi4ir/image/upload/v1776717907/ecommerce_bzjoun.jpg",
     demoLink: "https://ecommerce-nico-boscasso.vercel.app/",
   },
   {
