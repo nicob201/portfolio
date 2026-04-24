@@ -11,6 +11,16 @@ const projectsData = [
     demoLink: "https://github.com/nicob201/backend_API_ecommerce.git",
   },
   {
+    title: "Landing Page React.js & Vite",
+    description: {
+      en: "Landing page built with React.js",
+      es: "Landing page construida con React.js",
+    },
+    image:
+      "https://res.cloudinary.com/dl73hi4ir/image/upload/v1777073385/nexus-landing_xdkqot.jpg",
+    demoLink: "https://nexus-landing-lemon-phi.vercel.app/",
+  },
+  {
     title: "Landing Page React.js",
     description: {
       en: "Landing page built with React.js",
