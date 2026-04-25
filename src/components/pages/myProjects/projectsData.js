@@ -1,14 +1,14 @@
 // Projects data
 const projectsData = [
   {
-    title: "Backend API - Node.js",
+    title: "Professional Website - React.js",
     description: {
-      en: "Complete Backend API Restfull for ecommerce, built with Node.js and MongoDB",
-      es: "API Backend Restfull completa para ecommerce, construida con Node.js y MongoDB",
+      en: "Architectural firm website built with React.js",
+      es: "Sitio web profesional construido con React.js",
     },
     image:
-      "https://res.cloudinary.com/dl73hi4ir/image/upload/v1737764156/backend-api_1_ppwh3y.png",
-    demoLink: "https://github.com/nicob201/backend_API_ecommerce.git",
+      "https://res.cloudinary.com/dl73hi4ir/image/upload/v1777075165/atelier-forma_e9i8ow.jpg",
+    demoLink: "https://atelier-forma-one.vercel.app/",
   },
   {
     title: "Landing Page React.js & Vite",
@@ -39,6 +39,16 @@ const projectsData = [
     image:
       "https://res.cloudinary.com/dl73hi4ir/image/upload/v1776717907/ecommerce_bzjoun.jpg",
     demoLink: "https://ecommerce-nico-boscasso.vercel.app/",
+  },
+  {
+    title: "Backend API - Node.js",
+    description: {
+      en: "Complete Backend API Restfull for ecommerce, built with Node.js and MongoDB",
+      es: "API Backend Restfull completa para ecommerce, construida con Node.js y MongoDB",
+    },
+    image:
+      "https://res.cloudinary.com/dl73hi4ir/image/upload/v1737764156/backend-api_1_ppwh3y.png",
+    demoLink: "https://github.com/nicob201/backend_API_ecommerce.git",
   },
   {
     title: "JavaScript Quizz",
