@@ -1,6 +1,15 @@
 // Projects data
 const projectsData = [
   {
+    title: "Twitter/X Clone - AI Verified Challenge",
+    description: {
+      en: "Full-stack Twitter/X clone developed as part of an AI-assisted engineering challenge. Built with React, Express, TypeScript, PostgreSQL and Prisma, featuring authentication, social interactions, image uploads, automated testing, Docker deployment and 93%+ backend test coverage.",
+      es: "Clon full-stack de Twitter/X desarrollado para un challenge de ingeniería asistida por IA. Construido con React, Express, TypeScript, PostgreSQL y Prisma, incluyendo autenticación, interacciones sociales, carga de imágenes, testing automatizado, despliegue con Docker y más de 93% de cobertura de tests en backend.",
+    },
+    image: "https://res.cloudinary.com/dl73hi4ir/image/upload/v1780950467/604680006-9fbe1bfd-7b49-4a6c-95c2-4e4f930a0fe7_h8nvii.png",
+    demoLink: "https://github.com/nicob201/twitter-clone",
+  },
+  {
     title: "Professional Website - React.js",
     description: {
       en: "Architectural firm website built with React.js",
