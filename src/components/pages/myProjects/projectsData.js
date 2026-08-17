@@ -1,6 +1,15 @@
 // Projects data
 const projectsData = [
   {
+    title: "DocuAuto",
+    description: {
+      en: "Vehicle maintenance management SaaS. It enables users and fleet managers to track vehicles, maintenance, expenses, documents, and verified public reports. Next.js 16, React 19, Supabase, and MercadoPago.",
+      es: "SaaS de gestión de mantenimiento vehicular. Permite a usuarios y gestores de flota llevar registro de vehículos, mantenimientos, gastos, documentos y reportes públicos verificados. Next.js 16, React 19, Supabase y MercadoPago.",
+    },
+    image: "https://res.cloudinary.com/dl73hi4ir/image/upload/v1786996819/image_dirhqj.jpg",
+    demoLink: "https://www.docuauto.com",
+  },
+  {
     title: "Twitter/X Clone - AI Verified Challenge",
     description: {
       en: "Full-stack Twitter/X clone developed as part of an AI-assisted engineering challenge. Built with React, Express, TypeScript, PostgreSQL and Prisma, featuring authentication, social interactions, image uploads, automated testing, Docker deployment and 93%+ backend test coverage.",
