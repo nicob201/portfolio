@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "./skills.scss";
 
 const SkillItem = ({ Icon, label }) => {
@@ -8,11 +7,6 @@ const SkillItem = ({ Icon, label }) => {
       <span className="skill-label">{label}</span>
     </div>
   );
-};
-
-SkillItem.propTypes = {
-  Icon: PropTypes.elementType.isRequired,
-  label: PropTypes.string.isRequired,
 };
 
 export default SkillItem;

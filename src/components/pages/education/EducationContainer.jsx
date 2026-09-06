@@ -14,21 +14,23 @@ const EducationContainer = () => {
         </div>
 
         <div className="education-items">
-          {educationItems.map((item, index) => (
+          {educationItems.map((item, index) => {
+            const title =
+              typeof item.title === "object" ? item.title[language] : item.title;
+            const date =
+              typeof item.date === "object" ? item.date[language] : item.date;
+
+            return (
             <div className="education-item"
               key={index}
             >
               <div className="education-left">
-                <h3 className="education-item-title">
-                  {typeof item.title === "object" ? item.title[language] : item.title}
-                </h3>
+                <h3 className="education-item-title">{title}</h3>
                 <p className="education-item-school">{item.school}</p>
               </div>
 
               <div className="education-right">
-                <p className="education-item-date">
-                  {typeof item.date === "object" ? item.date[language] : item.date}
-                </p>
+                <p className="education-item-date">{date}</p>
               </div>
 
               <div className="education-right">
@@ -38,7 +40,7 @@ const EducationContainer = () => {
                       href={item.pdfLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`Download PDF for ${item.title}`}
+                      aria-label={`${t.education.downloadPdf} ${title}`}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +57,8 @@ const EducationContainer = () => {
                 </p>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,16 +1,17 @@
 .contact-section {
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: stretch;
 
   .container-fluid { padding: 0; }
-  .row.g-0 { margin: 0; min-height: 100vh; }
+  .row.g-0 { margin: 0; min-height: 100vh; min-height: 100svh; }
 
   // Columna Izquierda
   .left-column {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                      url("https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873946/12980760_5096154-scaled_jqog7s.jpg");
+                      url("https://res.cloudinary.com/dl73hi4ir/image/upload/f_auto,q_auto,w_1920/v1731873946/12980760_5096154-scaled_jqog7s.jpg");
     background-size: cover;
     background-position: center;
     display: flex;

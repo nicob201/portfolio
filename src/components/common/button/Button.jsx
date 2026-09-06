@@ -1,18 +1,11 @@
-import { useState } from "react";
 import "./button.scss";
 import { IoMdArrowDropright } from "react-icons/io";
 
 const Button = ({ children, ...rest }) => {
-  const [isHovered, setIsHovered] = useState(false);
   return (
-    <button
-      className="custom-button"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      {...rest}
-    >
+    <button className="custom-button" {...rest}>
       {children}
-      <IoMdArrowDropright className={`arrow ${isHovered ? "show" : ""}`} />
+      <IoMdArrowDropright className="arrow" />
     </button>
   );
 };

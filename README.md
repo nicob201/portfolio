@@ -1,58 +1,46 @@
-# 🎨 Mi Portfolio Personal
+# Portfolio — Nicolas Boscasso
 
-Bienvenido a mi portfolio personal desarrollado con **React y Vite**.
+Portfolio personal desarrollado con **React + Vite**.
 
-## 🚀 Tecnologías Utilizadas
+🔗 **Live:** [nicolas-boscasso.vercel.app](https://nicolas-boscasso.vercel.app/) · 💼 [LinkedIn](https://www.linkedin.com/in/nicolas-boscasso/) · 📧 [nicolasboscasso@gmail.com](mailto:nicolasboscasso@gmail.com)
 
-- **React** + **Vite** ⚡
-- **SCSS** para estilos personalizados 🎨
-- **Bootstrap V5** para una interfaz moderna 📐
-- **EmailJS** para la gestión de emails 📧
-- **React Icons** & **Bootstrap Icons** para iconografía 🖌️
+![Portfolio](https://github.com/user-attachments/assets/3f6ac2ae-0695-4c8a-bc07-6cd1d428682c)
 
-## 📌 Características
+## Stack
 
-🚧 Dark Mode en progreso
+- **React 18** + **Vite**
+- **SCSS** + **Bootstrap 5**
+- **EmailJS** + **reCAPTCHA** para el formulario de contacto
+- **React Icons**
 
-🚧 Version en Español en progreso
+## Características
 
-## 📸 Capturas de Pantalla
+- Diseño responsive (mobile first)
+- Bilingüe ES / EN con `Context API` y persistencia en `localStorage`
+- Formulario de contacto con validación anti-spam
+- 🚧 Dark mode pendiente
 
-![Image](https://github.com/user-attachments/assets/3f6ac2ae-0695-4c8a-bc07-6cd1d428682c)
+## Instalación
 
-## 🔧 Instalación y Uso
+```bash
+git clone https://github.com/nicob201/portfolio.git
+cd portfolio
+npm install
+cp .env.example .env   # completar con las credenciales de EmailJS y reCAPTCHA
+npm run dev
+```
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/nicob201/portfolio.git
-   cd mi-portfolio
-   ```
+Abrir [http://localhost:5173](http://localhost:5173).
 
-2. Instala las dependencias:
-   ```bash
-   npm install
-   ```
+## Scripts
 
-3. Ejecuta el proyecto en modo desarrollo:
-   ```bash
-   npm run dev
-   ```
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Build de producción |
+| `npm run preview` | Preview del build |
+| `npm run lint` | ESLint |
 
-4. Abre en tu navegador: [http://localhost:5173](http://localhost:5173)
+## Deploy
 
-## 🌍 Deploy
-
-### Este proyecto está desplegado en **Vercel**. Puedes verlo en línea aquí: [Mi Portfolio]()
-
-## 📬 Contacto
-
-Podes escribirme a través del formulario de contacto en el sitio o en mis redes sociales:
-
-- 📧 Email: [nicolasboscasso@gmail.com](mailto:nicolasboscasso@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/nicolas-boscasso](https://www.linkedin.com/in/nicolas-boscasso/)
-- 🐙 GitHub: [github.com/nicob201](https://github.com/nicob201)
-
----
-
-💡 *Gracias por visitar mi portfolio. ¡Espero que te guste!* 🚀
-
+Desplegado en **Vercel**: https://nicolas-boscasso.vercel.app/

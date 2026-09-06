@@ -13,7 +13,8 @@ const ContactSection = () => {
     email: "",
     message: "",
   });
-  const [success, setSuccess] = useState(false);
+  // { type: "success" | "error", msg } — rendered inside the live region below
+  const [status, setStatus] = useState(null);
   const [isSending, setIsSending] = useState(false);
   const captchaRef = useRef(null);
 
@@ -28,12 +29,12 @@ const ContactSection = () => {
     e.preventDefault();
 
     // Validar Captcha
-    const token = captchaRef.current.getValue();
-    if (!token) {
-      alert(t.contact.errorMsg);
+    if (!captchaRef.current.getValue()) {
+      setStatus({ type: "error", msg: t.contact.captchaMsg });
       return;
     }
 
+    setStatus(null);
     setIsSending(true);
 
     emailjs
@@ -45,18 +46,16 @@ const ContactSection = () => {
       )
       .then(
         () => {
-          setSuccess(true);
           setIsSending(false);
+          setStatus({ type: "success", msg: t.contact.successMsg });
           setFormData({ name: "", email: "", message: "" });
           captchaRef.current.reset();
-          setTimeout(() => setSuccess(false), 5000);
+          setTimeout(() => setStatus(null), 5000);
         },
         (error) => {
-          console.log("FAILED...", error);
+          console.error("EmailJS failed:", error);
           setIsSending(false);
-          console.log("FAILED...", error);
-          setIsSending(false);
-          alert(t.contact.errorMsg);
+          setStatus({ type: "error", msg: t.contact.errorMsg });
         }
       );
   };
@@ -78,8 +77,8 @@ const ContactSection = () => {
 
               <div className="info-item">
                 <strong>{t.contact.emailLabel}</strong>
-                <a href="mailto:nicoboscasso@gmail.com">
-                  <span>nicoboscasso@gmail.com</span>
+                <a href="mailto:nicolasboscasso@gmail.com">
+                  <span>nicolasboscasso@gmail.com</span>
                 </a>
               </div>
             </div>
@@ -91,25 +90,41 @@ const ContactSection = () => {
               <h2 className="contact-title">{t.contact.title}</h2>
 
               <form onSubmit={handleSubmit}>
+                <label htmlFor="contact-name" className="visually-hidden">
+                  {t.contact.form.namePlaceholder}
+                </label>
                 <input
                   type="text"
+                  id="contact-name"
                   name="name"
                   className="form-control"
                   placeholder={t.contact.form.namePlaceholder}
                   value={formData.name}
                   onChange={handleChange}
+                  autoComplete="name"
                   required
                 />
+
+                <label htmlFor="contact-email" className="visually-hidden">
+                  {t.contact.form.emailPlaceholder}
+                </label>
                 <input
                   type="email"
+                  id="contact-email"
                   name="email"
                   className="form-control"
                   placeholder={t.contact.form.emailPlaceholder}
                   value={formData.email}
                   onChange={handleChange}
+                  autoComplete="email"
                   required
                 />
+
+                <label htmlFor="contact-message" className="visually-hidden">
+                  {t.contact.form.messagePlaceholder}
+                </label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   className="form-control"
                   placeholder={t.contact.form.messagePlaceholder}
@@ -144,11 +159,18 @@ const ContactSection = () => {
                 </button>
               </form>
 
-              {success && (
-                <div className="alert alert-success mt-3" role="alert">
-                  {t.contact.successMsg}
-                </div>
-              )}
+              {/* Live region: siempre en el DOM para que el lector de pantalla lo anuncie */}
+              <div role="status" aria-live="polite">
+                {status && (
+                  <div
+                    className={`alert mt-3 ${
+                      status.type === "success" ? "alert-success" : "alert-danger"
+                    }`}
+                  >
+                    {status.msg}
+                  </div>
+                )}
+              </div>
 
               <div className="resume-section">
                 <p>{t.contact.resumeCta}</p>
@@ -158,6 +180,7 @@ const ContactSection = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="resume-download-btn"
+                  aria-label={t.contact.resumeCta}
                 >
                   <FiDownload />
                 </a>

@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/layout/navbar/Navbar";
 import Footer from "./components/layout/footer/Footer";
 import About from "./components/pages/about/About";
@@ -12,15 +11,13 @@ import { LanguageProvider } from "./context/LanguageContext";
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
-        <Navbar />
-        <About />
-        <SkillsContainer />
-        <EducationContainer />
-        <ProjectsContainer />
-        <ContactSection />
-        <Footer />
-      </BrowserRouter>
+      <Navbar />
+      <About />
+      <SkillsContainer />
+      <EducationContainer />
+      <ProjectsContainer />
+      <ContactSection />
+      <Footer />
     </LanguageProvider>
   );
 }

@@ -17,8 +17,10 @@ const About = () => {
       <div className="about-wrapper">
         <div className="about-image">
           <img
-            src="https://res.cloudinary.com/dl73hi4ir/image/upload/v1731873474/20240423_170639_1_qji49v.jpg"
+            src="https://res.cloudinary.com/dl73hi4ir/image/upload/c_fill,g_face,w_300,h_300,q_auto,f_auto/v1731873474/20240423_170639_1_qji49v.jpg"
             alt="Nicolas Boscasso"
+            width="150"
+            height="150"
           />
         </div>
 

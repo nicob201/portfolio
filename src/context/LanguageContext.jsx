@@ -24,6 +24,7 @@ const translations = {
     education: {
       title: "Education",
       inProgress: "In Progress",
+      downloadPdf: "View certificate:",
     },
     projects: {
       title: "Projects",
@@ -41,7 +42,8 @@ const translations = {
         sendingBtn: "SENDING...",
       },
       successMsg: "Message sent! I'll contact you soon!",
-      errorMsg: "Opps! Something went wrong. Please try again later.",
+      errorMsg: "Oops! Something went wrong. Please try again later.",
+      captchaMsg: "Please confirm you are not a robot.",
       resumeCta: "OR... DOWNLOAD MY RESUME HERE!",
     },
   },
@@ -66,6 +68,7 @@ const translations = {
     education: {
       title: "Educación",
       inProgress: "En Progreso",
+      downloadPdf: "Ver certificado:",
     },
     projects: {
       title: "Proyectos",
@@ -83,21 +86,37 @@ const translations = {
         sendingBtn: "ENVIANDO...",
       },
       successMsg: "¡Mensaje enviado! ¡Te contactaré pronto!",
-      errorMsg: "¡Ups! Algo salió mal. Por favor, inténtalo de nuevo más tarde.",
+      errorMsg: "¡Ups! Algo salió mal. Por favor, intentá de nuevo más tarde.",
+      captchaMsg: "Por favor confirmá que no sos un robot.",
       resumeCta: "O... DESCARGA MI CURRICULUM AQUÍ",
     },
   },
 };
 
+const getInitialLanguage = () => {
+  // 1. ?lang= in the URL wins, so the language is shareable
+  const fromUrl = new URLSearchParams(window.location.search).get("lang");
+  if (fromUrl === "en" || fromUrl === "es") return fromUrl;
+
+  // 2. then whatever the visitor picked last time
+  const stored = localStorage.getItem("language");
+  if (stored === "en" || stored === "es") return stored;
+
+  // 3. otherwise follow the browser
+  return navigator.language?.toLowerCase().startsWith("es") ? "es" : "en";
+};
+
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(() => {
-    // Initialize from localStorage or default to 'en'
-    return localStorage.getItem("language") || "en";
-  });
+  const [language, setLanguage] = useState(getInitialLanguage);
 
   useEffect(() => {
-    // Update localStorage whenever language changes
     localStorage.setItem("language", language);
+    document.documentElement.lang = language;
+
+    // Keep ?lang= in sync so the current view can be copy-pasted
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", language);
+    window.history.replaceState({}, "", url);
   }, [language]);
 
   const toggleLanguage = () => {
