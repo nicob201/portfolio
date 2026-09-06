@@ -1,4 +1,5 @@
 import "./navbar.scss";
+import { FiDownload } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { useLanguage } from "../../../context/LanguageContext";
 
@@ -44,6 +45,17 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+
+        {/* Fuera del collapse: en mobile queda visible al lado del menu */}
+        <a
+          className="nav-cv"
+          href={t.contact.resumeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FiDownload aria-hidden="true" />
+          {t.navbar.resume}
+        </a>
       </div>
     </nav>
   );

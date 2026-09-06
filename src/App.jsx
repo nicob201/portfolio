@@ -6,6 +6,8 @@ import EducationContainer from "./components/pages/education/EducationContainer"
 import ProjectsContainer from "./components/pages/myProjects/ProjectsContainer";
 import ContactSection from "./components/pages/contact/ContactContainer";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
       <ProjectsContainer />
       <ContactSection />
       <Footer />
+      <Analytics />
     </LanguageProvider>
   );
 }

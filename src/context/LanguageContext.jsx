@@ -10,6 +10,7 @@ const translations = {
       education: "Education",
       projects: "Projects",
       contact: "Contact",
+      resume: "Resume",
     },
     about: {
       title: "FullStack\nDeveloper",
@@ -45,6 +46,7 @@ const translations = {
       errorMsg: "Oops! Something went wrong. Please try again later.",
       captchaMsg: "Please confirm you are not a robot.",
       resumeCta: "OR... DOWNLOAD MY RESUME HERE!",
+      resumeUrl: "https://drive.google.com/file/d/1bouD__fWg2Mhrqu4xLSE23KLxeKVvMVW/view?usp=sharing",
     },
   },
   es: {
@@ -54,6 +56,7 @@ const translations = {
       education: "Educación",
       projects: "Proyectos",
       contact: "Contacto",
+      resume: "CV",
     },
     about: {
       title: "Desarrollador\nFullStack",
@@ -89,6 +92,7 @@ const translations = {
       errorMsg: "¡Ups! Algo salió mal. Por favor, intentá de nuevo más tarde.",
       captchaMsg: "Por favor confirmá que no sos un robot.",
       resumeCta: "O... DESCARGA MI CURRICULUM AQUÍ",
+      resumeUrl: "https://drive.google.com/file/d/1bouD__fWg2Mhrqu4xLSE23KLxeKVvMVW/view?usp=sharing",
     },
   },
 };

@@ -175,7 +175,7 @@ const ContactSection = () => {
               <div className="resume-section">
                 <p>{t.contact.resumeCta}</p>
                 <a
-                  href="https://drive.google.com/file/d/1bouD__fWg2Mhrqu4xLSE23KLxeKVvMVW/view?usp=sharing"
+                  href={t.contact.resumeUrl}
                   download
                   target="_blank"
                   rel="noopener noreferrer"
