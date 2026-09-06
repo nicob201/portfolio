@@ -33,7 +33,6 @@ const translations = {
     },
     skills: {
       title: "My Skills",
-      subtitle: "Core stack, and whatever the project needs",
       cta: "View My Work",
     },
     education: {
@@ -93,7 +92,6 @@ const translations = {
     },
     skills: {
       title: "Mis Habilidades",
-      subtitle: "Stack principal, y lo que el proyecto necesite",
       cta: "Ver Mis Proyectos",
     },
     education: {

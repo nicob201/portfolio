@@ -16,8 +16,8 @@ const experienceItems = [
     },
     links: [
       { label: "Aster Estudio", url: "https://asterestudio.com/" },
-      { label: "Lumident", url: "https://lumident.pixerum.com/" },
-      { label: "Indigo Shop", url: "https://indigoshop.pixerum.com/" },
+      { label: "Estudio Arqci", url: "https://arqci.com.ar/" },
+      { label: "Gea Logistics", url: "https://gealogistics.net/" },
     ],
   },
   {
