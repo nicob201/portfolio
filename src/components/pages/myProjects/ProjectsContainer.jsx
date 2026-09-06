@@ -25,8 +25,15 @@ const ProjectsContainer = () => {
 
         {featured && (
           <article className="featured-project">
-            <div className="featured-image">
-              <img src={featured.image} alt={featured.title} />
+            <div className="featured-images">
+              {[featured.image, ...(featured.gallery ?? [])].map((src, i) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt={`${t.caseStudy.screenshot} ${featured.title}`}
+                  loading={i === 0 ? undefined : "lazy"}
+                />
+              ))}
             </div>
 
             <div className="featured-body">

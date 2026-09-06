@@ -98,18 +98,15 @@
 
     .container {
       .education-item {
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 250px 120px;
         align-items: center;
-        gap: 3rem;
+        gap: 2rem;
 
-        .education-left {
-          max-width: 60%;
-        }
-
+        .education-left,
         .education-right {
-          max-width: 20%;
-          text-align: right;
+          max-width: none;
+          text-align: left;
         }
       }
     }

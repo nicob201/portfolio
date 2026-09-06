@@ -29,6 +29,7 @@ const translations = {
       highlights: "Highlights",
       challenge: "Hardest problem",
       visitSite: "Visit site",
+      screenshot: "Screenshot of",
     },
     skills: {
       title: "My Skills",
@@ -88,6 +89,7 @@ const translations = {
       highlights: "Lo que incluye",
       challenge: "El problema más difícil",
       visitSite: "Ver el sitio",
+      screenshot: "Captura de",
     },
     skills: {
       title: "Mis Habilidades",

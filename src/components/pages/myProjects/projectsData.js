@@ -9,11 +9,15 @@ const projectsData = [
     image: "https://res.cloudinary.com/dl73hi4ir/image/upload/f_auto,q_auto,w_1200/v1786996819/image_dirhqj.jpg",
     demoLink: "https://www.docuauto.com",
     featured: true,
+    gallery: [
+      "https://res.cloudinary.com/dl73hi4ir/image/upload/f_auto,q_auto,w_1200/v1788666028/image_1_rwuccn.jpg",
+      "https://res.cloudinary.com/dl73hi4ir/image/upload/f_auto,q_auto,w_1200/v1788666046/image_3_ione5o.jpg",
+    ],
     role: {
-      en: "Solo: product, database, backend, frontend, payments and deploy",
-      es: "En solitario: producto, base de datos, backend, frontend, pagos y deploy",
+      en: "Product Development: product, database, backend, frontend, payments and deploy",
+      es: "Desarrollo de producto: producto, base de datos, backend, frontend, pagos y deploy",
     },
-    timeframe: { en: "7 months · live", es: "7 meses · en producción" },
+    timeframe: { en: "8 months · live", es: "8 meses · en producción" },
     stack:
       "Next.js 16 · React 19 · TypeScript · Supabase (PostgreSQL + RLS) · MercadoPago · Tailwind · Vitest",
     highlights: {

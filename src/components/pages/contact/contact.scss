@@ -43,6 +43,12 @@
           span {
             font-size: 1.6rem;
             font-weight: 500;
+            // El email es una palabra larga sin espacios: se pasaba del ancho
+            overflow-wrap: anywhere;
+
+            @media (max-width: 480px) {
+              font-size: 1.15rem;
+            }
           }
 
           &:hover { opacity: 0.7; }

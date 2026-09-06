@@ -91,3 +91,23 @@
     justify-content: center;
   }
 }
+
+/* = MOBILE CHICO (320px) = */
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 2rem 1rem;
+  }
+
+  .container-skills,
+  .container-skills .skills-left {
+    min-width: 0; // sin esto el flex item no baja del ancho del titulo
+  }
+
+  .container-skills .skills-left {
+    padding: 1.5rem;
+
+    .skills-title {
+      font-size: 1.8rem;
+    }
+  }
+}
