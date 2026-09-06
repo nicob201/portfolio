@@ -119,7 +119,7 @@ const translations = {
       successMsg: "¡Mensaje enviado! ¡Te contactaré pronto!",
       errorMsg: "¡Ups! Algo salió mal. Por favor, intentá de nuevo más tarde.",
       captchaMsg: "Por favor confirmá que no sos un robot.",
-      resumeCta: "O... DESCARGA MI CURRICULUM AQUÍ",
+      resumeCta: "O... DESCARGÁ MI CURRICULUM ACÁ!",
       resumeUrl: "https://drive.google.com/file/d/1TjldMaHFweHnuQgNvHO1yy4RctBxKEPr/view?usp=sharing",
     },
   },
