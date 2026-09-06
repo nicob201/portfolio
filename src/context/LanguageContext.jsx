@@ -6,6 +6,7 @@ const translations = {
   en: {
     navbar: {
       home: "Home",
+      experience: "Experience",
       skills: "Skills",
       education: "Education",
       projects: "Projects",
@@ -14,12 +15,24 @@ const translations = {
     },
     about: {
       title: "FullStack\nDeveloper",
-      description: "Welcome! I'm a web developer specializing in creating dynamic and efficient websites. Through my code, I turn challenges into innovative digital solutions. Feel free to explore my portfolio and discover me!",
+      description: "Full-stack developer based in Córdoba, Argentina. I designed, built and shipped DocuAuto — a vehicle maintenance SaaS running in production with recurring subscriptions and payments. I work with React, Next.js, Node and PostgreSQL, and I learn whatever the problem needs. Available for remote roles and freelance work.",
       button: "Let's talk!",
+    },
+    experience: {
+      title: "Experience",
+      present: "Present",
+    },
+    caseStudy: {
+      role: "Role",
+      timeframe: "Timeframe",
+      stack: "Stack",
+      highlights: "Highlights",
+      challenge: "Hardest problem",
+      visitSite: "Visit site",
     },
     skills: {
       title: "My Skills",
-      subtitle: "(I'm learning more)",
+      subtitle: "Core stack, and whatever the project needs",
       cta: "View My Work",
     },
     education: {
@@ -52,6 +65,7 @@ const translations = {
   es: {
     navbar: {
       home: "Inicio",
+      experience: "Experiencia",
       skills: "Habilidades",
       education: "Educación",
       projects: "Proyectos",
@@ -60,12 +74,24 @@ const translations = {
     },
     about: {
       title: "Desarrollador\nFullStack",
-      description: "¡Bienvenido! Soy un desarrollador web especializado en crear sitios web dinámicos y eficientes. A través de mi código, convierto desafíos en soluciones digitales innovadoras. Te invito a navegar por mi portafolio y descubrirme",
+      description: "Desarrollador full-stack en Córdoba, Argentina. Diseñé, construí y publiqué DocuAuto: un SaaS de gestión de mantenimiento vehicular en producción, con suscripciones y pagos recurrentes. Trabajo con React, Next.js, Node y PostgreSQL, y aprendo lo que el problema necesite. Disponible para trabajo remoto y freelance.",
       button: "¡Hablemos!",
+    },
+    experience: {
+      title: "Experiencia",
+      present: "Presente",
+    },
+    caseStudy: {
+      role: "Rol",
+      timeframe: "Duración",
+      stack: "Stack",
+      highlights: "Lo que incluye",
+      challenge: "El problema más difícil",
+      visitSite: "Ver el sitio",
     },
     skills: {
       title: "Mis Habilidades",
-      subtitle: "(Estoy aprendiendo más)",
+      subtitle: "Stack principal, y lo que el proyecto necesite",
       cta: "Ver Mis Proyectos",
     },
     education: {
@@ -92,7 +118,7 @@ const translations = {
       errorMsg: "¡Ups! Algo salió mal. Por favor, intentá de nuevo más tarde.",
       captchaMsg: "Por favor confirmá que no sos un robot.",
       resumeCta: "O... DESCARGA MI CURRICULUM AQUÍ",
-      resumeUrl: "https://drive.google.com/file/d/1bouD__fWg2Mhrqu4xLSE23KLxeKVvMVW/view?usp=sharing",
+      resumeUrl: "https://drive.google.com/file/d/1TjldMaHFweHnuQgNvHO1yy4RctBxKEPr/view?usp=sharing",
     },
   },
 };

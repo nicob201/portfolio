@@ -34,6 +34,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item"><a className="nav-link" href="#home">{t.navbar.home}</a></li>
+            <li className="nav-item"><a className="nav-link" href="#experience">{t.navbar.experience}</a></li>
             <li className="nav-item"><a className="nav-link" href="#skills">{t.navbar.skills}</a></li>
             <li className="nav-item"><a className="nav-link" href="#education">{t.navbar.education}</a></li>
             <li className="nav-item"><a className="nav-link" href="#projects">{t.navbar.projects}</a></li>
