@@ -1,7 +1,7 @@
 import "./navbar.scss";
 import { FiDownload } from "react-icons/fi";
 import { useEffect, useState } from "react";
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 const Navbar = () => {
   const { language, toggleLanguage, t } = useLanguage();

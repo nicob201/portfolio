@@ -4,7 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import "./contact.scss";
 import { FiDownload } from "react-icons/fi";
 
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 const ContactSection = () => {
   const { t } = useLanguage();

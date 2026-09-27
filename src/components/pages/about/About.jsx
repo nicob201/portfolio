@@ -1,7 +1,7 @@
 import Button from "../../common/button/Button";
 import "./about.scss";
 
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 const About = () => {
   const { t } = useLanguage();

@@ -1,7 +1,7 @@
 import "./experience.scss";
 import experienceItems from "./experienceData";
 
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 const ExperienceContainer = () => {
   const { language, t } = useLanguage();

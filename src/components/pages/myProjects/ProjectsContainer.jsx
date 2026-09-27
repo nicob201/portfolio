@@ -2,7 +2,7 @@ import "./projects.scss";
 import projectsData from "./projectsData";
 import Button from "../../common/button/Button";
 
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 const ProjectsContainer = () => {
   const { language, t } = useLanguage();
@@ -65,13 +65,24 @@ const ProjectsContainer = () => {
               <h4>{t.caseStudy.challenge}</h4>
               <p className="featured-challenge">{featured.challenge[language]}</p>
 
-              <a
-                href={featured.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button>{t.caseStudy.visitSite}</Button>
-              </a>
+              <div className="d-flex flex-wrap gap-3">
+                <a
+                  href={featured.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button>{t.caseStudy.visitSite}</Button>
+                </a>
+                {featured.repoLink && (
+                  <a
+                    href={featured.repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button>{t.caseStudy.viewCode}</Button>
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         )}

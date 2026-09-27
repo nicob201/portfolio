@@ -1,6 +1,5 @@
-import { createContext, useState, useEffect, useContext } from "react";
-
-const LanguageContext = createContext();
+import { useState, useEffect } from "react";
+import { LanguageContext } from "./languageContextValue";
 
 const translations = {
   en: {
@@ -29,6 +28,7 @@ const translations = {
       highlights: "Highlights",
       challenge: "Hardest problem",
       visitSite: "Visit site",
+      viewCode: "View code",
       screenshot: "Screenshot of",
     },
     skills: {
@@ -88,6 +88,7 @@ const translations = {
       highlights: "Lo que incluye",
       challenge: "El problema más difícil",
       visitSite: "Ver el sitio",
+      viewCode: "Ver código",
       screenshot: "Captura de",
     },
     skills: {
@@ -165,5 +166,3 @@ export const LanguageProvider = ({ children }) => {
     </LanguageContext.Provider>
   );
 };
-
-export const useLanguage = () => useContext(LanguageContext);

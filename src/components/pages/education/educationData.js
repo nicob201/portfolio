@@ -7,9 +7,11 @@ const educationItems = [
         },
         school: "Teclab",
         date: {
-            en: "August 2024 - present",
-            es: "Agosto 2024 - presente",
+            en: "August 2024 - September 2026",
+            es: "Agosto 2024 - Septiembre 2026",
         },
+        pdfLink:
+            "https://drive.google.com/file/d/1gcUYmTAuti92dZN_JJwAcWVemUBBpPqr/view?usp=sharing",
     },
     {
         title: {

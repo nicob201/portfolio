@@ -2,7 +2,7 @@ import Button from "../../common/button/Button";
 import SkillItem from "./Skills";
 import { skillsData } from "./skillsData";
 
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 const SkillsContainer = () => {
   const { t } = useLanguage();

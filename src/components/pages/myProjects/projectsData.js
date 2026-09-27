@@ -8,6 +8,7 @@ const projectsData = [
     },
     image: "https://res.cloudinary.com/dl73hi4ir/image/upload/f_auto,q_auto,w_1200/v1786996819/image_dirhqj.jpg",
     demoLink: "https://www.docuauto.com",
+    repoLink: "https://github.com/nicob201/docuauto-case-study",
     featured: true,
     gallery: [
       "https://res.cloudinary.com/dl73hi4ir/image/upload/f_auto,q_auto,w_1200/v1788666028/image_1_rwuccn.jpg",

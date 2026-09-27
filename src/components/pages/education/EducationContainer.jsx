@@ -1,7 +1,7 @@
 import "./education.scss";
 import educationItems from "./educationData";
 
-import { useLanguage } from "../../../context/LanguageContext";
+import { useLanguage } from "../../../context/useLanguage";
 
 const EducationContainer = () => {
   const { language, t } = useLanguage();
