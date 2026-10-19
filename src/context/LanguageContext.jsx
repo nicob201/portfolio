@@ -59,7 +59,7 @@ const translations = {
       errorMsg: "Oops! Something went wrong. Please try again later.",
       captchaMsg: "Please confirm you are not a robot.",
       resumeCta: "OR... DOWNLOAD MY RESUME HERE!",
-      resumeUrl: "https://drive.google.com/file/d/1B4biGK1eRpms0deYb6OpVbQ07ngVBouQ/view?usp=sharing",
+      resumeUrl: "https://drive.google.com/file/d/1nOIM06PxnfakhtQLScbQL3YjiDo8MCcY/view?usp=sharing",
     },
   },
   es: {
@@ -119,7 +119,7 @@ const translations = {
       errorMsg: "¡Ups! Algo salió mal. Por favor, intentá de nuevo más tarde.",
       captchaMsg: "Por favor confirmá que no sos un robot.",
       resumeCta: "O... DESCARGÁ MI CURRICULUM ACÁ!",
-      resumeUrl: "https://drive.google.com/file/d/1S-MJNQ510RTnLB_Si2zaOCjvCM1uFl7u/view?usp=sharing",
+      resumeUrl: "https://drive.google.com/file/d/1m00T-nLj-Ud6cG9Rv9290KwYobDFtvuz/view?usp=sharing",
     },
   },
 };
