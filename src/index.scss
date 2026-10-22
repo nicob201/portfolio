@@ -1,41 +1,226 @@
-@import "./styles/breakpoints";
-@import "./styles/mixins";
-@import "bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+// Design tokens. Colors and fonts are only referenced through these variables.
+:root {
+  --bg: #160c28;
+  --bg-raised: #1a1030;
+  --bg-deep: #0b0618;
+  --bg-hover: #21173a;
+  --ink: #e1efe6;
+  --ink-soft: #c5cccb;
+  --muted: #aeb7b3;
+  --line: #2e2247;
+  --line-strong: #4a3b66;
+  --line-button: #3a2e55;
+  --gold: #efcb68;
+  --bg-translucent: rgba(22, 12, 40, 0.9);
+  --gold-soft: rgba(239, 203, 104, 0.7);
+  --gold-underline: rgba(239, 203, 104, 0.55);
+  --gold-highlight: rgba(239, 203, 104, 0.38);
+  --gold-tint: rgba(239, 203, 104, 0.07);
+  --hatch: rgba(239, 203, 104, 0.2);
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Oxanium", sans-serif;
+  --font-display: "Anta", "Arial Narrow", sans-serif;
+  --font-text: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-hand: "Caveat", "Segoe Print", cursive;
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --sheet-pad: clamp(16px, 3vw, 32px);
+  --section-gap: clamp(96px, 12vw, 160px);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-a {
-  text-decoration: none;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
+  background: var(--bg);
+  color-scheme: dark;
 }
 
-html, body {
-  overflow-x: hidden;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.6 var(--font-text);
+  -webkit-font-smoothing: antialiased;
+  // clip, not hidden: hidden would turn body into a scroll container and break the sticky bar
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
-// Colors
-:root {
-  --color1: #160c28ff;
-  --color2: #efcb68ff;
-  --color3: #e1efe6ff;
-  --color4: #aeb7b3ff;
-  --color5: #000411ff;
-  --color6: #CF5C36;
-  --color7: #D48838;
-  --color8: #1e1e1e;
+button {
+  font: inherit;
+}
+
+a {
+  color: var(--ink);
+  text-decoration-color: var(--gold-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease-out;
+
+  &:hover {
+    color: var(--gold);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+// Anchors land below the sticky bar
+[id] {
+  scroll-margin-top: 96px;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.hatch {
+  background: repeating-linear-gradient(135deg, var(--hatch) 0 1px, transparent 1px 7px);
+}
+
+// Small ↗ after linked titles (work rows, project cards)
+.title-arrow {
+  font: 400 0.45em var(--font-mono);
+  color: var(--gold);
+}
+
+// Bordered box with a main link and a side action (DocuAuto links, contact mail)
+.command-box {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 560px;
+  border: 1px solid var(--line-strong);
+}
+
+// Basis wide enough for the full email; below that the action wraps underneath
+.command-box-main {
+  flex: 1 1 260px;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 16px;
+  font: 500 15px var(--font-mono);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+// The shadow draws the divider on the left, or on top once the action wraps below
+.command-box-action {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: 1 0 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 0;
+  box-shadow: -1px -1px 0 var(--line-strong);
+  background: none;
+  font: 600 13px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+  &:hover {
+    background: var(--bg-hover);
+    color: var(--gold);
+  }
+}
+
+// Featured variant (DocuAuto links): gold frame, gold link and a filled action
+.command-box--featured {
+  border-color: var(--gold);
+
+  .command-box-main,
+  .command-box-action {
+    gap: 8px;
+  }
+
+  .command-box-main {
+    color: var(--gold);
+
+    &:hover {
+      background: var(--gold-tint);
+    }
+  }
+
+  .command-box-action {
+    box-shadow: -1px -1px 0 var(--gold);
+    background: var(--gold);
+    color: var(--bg);
+
+    &:hover {
+      background: var(--ink);
+      color: var(--bg);
+    }
+  }
+}
+
+// Gold "available / live" dot used in the top bar and the hero badge
+.status-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

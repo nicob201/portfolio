@@ -1,0 +1,23 @@
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 32px;
+  padding-top: clamp(28px, 4vw, 48px);
+  padding-bottom: clamp(20px, 2.5vw, 32px);
+
+  &--inset {
+    padding-inline: var(--sheet-pad);
+  }
+}
+
+.section-title {
+  font: 400 clamp(44px, 6.4vw, 92px) / 0.9 var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.section-note {
+  max-width: 34ch;
+  color: var(--muted);
+}

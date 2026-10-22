@@ -1,43 +1,133 @@
+// Ridge height; the closing line rises 45% of it so the mountains cover its base
+// Its minimum stays below the closing line's minimum so small screens keep the same proportion
+$ridge-height: clamp(40px, 9vw, 140px);
+
 .footer {
-  background-color: var(--color1);
-  color: var(--color7);
-  padding: 1rem 0;
+  margin-top: var(--section-gap);
+  overflow: hidden;
+}
 
-  .copyright {
-    font-size: 0.9rem;
+.footer-sky {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 24px;
+}
+
+.footer-closing {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: calc(#{$ridge-height} * 0.45);
+  font: 400 clamp(44px, 11vw, 170px) / 0.8 var(--font-display);
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+
+  &:hover {
+    color: var(--gold);
   }
 
-  .social-icon {
-    color: var(--color7);
-    margin-left: 1rem;
-    transition: color 0.3s ease;
+  // At small sizes legibility wins over the sinking effect
+  @media (max-width: 600px) {
+    margin-bottom: calc(#{$ridge-height} * 0.6);
+  }
+}
 
-    &:hover {
-      color: var(--color6);
-      text-decoration: none;
-    }
+.footer-ridge {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: $ridge-height;
+  pointer-events: none;
+}
 
-    svg {
-      width: 1.5em;
-      height: 1.5em;
-    }
+.footer-ridge-fill {
+  fill: var(--bg-deep);
+}
+
+.footer-ridge-line {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.footer-ground {
+  background: var(--bg-deep);
+}
+
+.footer-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.footer-versions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 16px;
+  font: 500 13px var(--font-mono);
+  letter-spacing: 0.04em;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
   }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  a,
+  li > span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
   }
 
-  .text-md-start {
-    @media (min-width: 768px) {
-      text-align: left;
-    }
+  em {
+    margin-left: 0.5em;
+    font-style: normal;
+    color: var(--gold);
   }
+}
 
-  .justify-content-md-end {
-    @media (min-width: 768px) {
-      justify-content: flex-end;
-    }
-  }
+.footer-versions-label {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 24px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.footer-clock {
+  font: 400 13px var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.footer-top {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font: 500 13px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
 }

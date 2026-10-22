@@ -1,45 +1,34 @@
-import Button from "../../common/button/Button";
 import "./about.scss";
-
+import Sheet from "../../common/Sheet";
+import SectionHeader from "../../common/SectionHeader";
+import Emphasis from "../../common/Emphasis";
 import { useLanguage } from "../../../context/useLanguage";
 
 const About = () => {
   const { t } = useLanguage();
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
-    <section id="home" className="about hero-container">
-      <div className="about-wrapper">
-        <div className="about-image">
-          <img
-            src="https://res.cloudinary.com/dl73hi4ir/image/upload/c_fill,g_face,w_300,h_300,q_auto,f_auto/v1731873474/20240423_170639_1_qji49v.jpg"
-            alt="Nicolas Boscasso"
-            width="150"
-            height="150"
-          />
-        </div>
-
-        <div className="about-text">
-          <span className="about-name">Nicolas Boscasso</span>
-
-          <h1 className="about-title" style={{ whiteSpace: "pre-line" }}>
-            {t.about.title}
-          </h1>
-
-          <div className="horizontal-row"></div>
-
-          <p>
-            {t.about.description}
-          </p>
-
-          <Button onClick={scrollToContact}>{t.about.button}</Button>
-        </div>
+    <section id="sobre-mi" className="wrap about" aria-labelledby="sobre-mi-titulo">
+      <div className="about-text">
+        <SectionHeader id="sobre-mi-titulo" title={t.about.title} />
+        <p className="about-statement">
+          <Emphasis text={t.about.statement} as="mark" />
+        </p>
+        <p className="about-hand-note">{t.about.handNote}</p>
+        <p className="about-body">{t.about.body}</p>
+        <p className="about-body">{t.about.story}</p>
       </div>
+
+      <Sheet as="aside" corners="diagonal" className="about-facts" aria-label={t.about.factsLabel}>
+        <dl>
+          {t.about.facts.map((fact) => (
+            <div key={fact.label}>
+              <dt>{fact.label}</dt>
+              <dd>{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </Sheet>
     </section>
   );
 };

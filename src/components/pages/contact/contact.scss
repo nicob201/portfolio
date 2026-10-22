@@ -1,167 +1,116 @@
-.contact-section {
-  min-height: 100vh;
-  min-height: 100svh;
+.contact {
+  margin-top: var(--section-gap);
+}
+
+// SOCIAL ROWS: gold sweeps in from the left on hover / focus
+
+.social-list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.social-row {
+  position: relative;
+  isolation: isolate;
   display: flex;
-  align-items: stretch;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 20px;
+  padding: clamp(14px, 2vw, 22px) 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.3s ease-out;
 
-  .container-fluid { padding: 0; }
-  .row.g-0 { margin: 0; min-height: 100vh; min-height: 100svh; }
-
-  // Columna Izquierda
-  .left-column {
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                      url("https://res.cloudinary.com/dl73hi4ir/image/upload/f_auto,q_auto,w_1920/v1731873946/12980760_5096154-scaled_jqog7s.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 5rem;
-    color: white;
-
-    .info-block {
-      max-width: 400px;
-      width: 100%;
-
-      .info-item {
-        margin-bottom: 2.5rem;
-
-        strong {
-          color: #f2c94c;
-          display: block;
-          font-size: 0.85rem;
-          letter-spacing: 2px;
-          margin-bottom: 0.5rem;
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-          transition: opacity 0.3s ease;
-
-          span {
-            font-size: 1.6rem;
-            font-weight: 500;
-            // El email es una palabra larga sin espacios: se pasaba del ancho
-            overflow-wrap: anywhere;
-
-            @media (max-width: 480px) {
-              font-size: 1.15rem;
-            }
-          }
-
-          &:hover { opacity: 0.7; }
-        }
-      }
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.55s var(--ease-out);
   }
 
-  // Columna Derecha
-  .right-column {
-    background-color: #f0f4f1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 4rem;
+  &:hover,
+  &:focus-visible {
+    color: var(--bg);
 
-    .form-container {
-      width: 100%;
-      max-width: 500px;
+    &::before {
+      transform: scaleX(1);
+    }
 
-      .contact-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #1a2a2d;
-        margin-bottom: 2rem;
-      }
-
-      .form-control {
-        border: none;
-        border-radius: 0;
-        padding: 0.8rem 1rem;
-        margin-bottom: 1rem;
-        &:focus { box-shadow: 0 0 0 0.2rem rgba(242, 201, 76, 0.25); }
-      }
-
-      .captcha-wrapper {
-        margin: 1.5rem 0;
-        @media (max-width: 400px) {
-          transform: scale(0.85);
-          transform-origin: left;
-        }
-      }
-
-      .btn-send {
-        width: 100%;
-        background-color: #f2c94c;
-        border: none;
-        padding: 1rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-        color: #1a1a1a;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-
-        &:hover:not(:disabled) { background-color: #e2b93c; }
-
-        &.sending {
-          background-color: #d4ac2b;
-          cursor: not-allowed;
-          opacity: 0.8;
-        }
-
-        .spinner-border {
-          margin-right: 10px;
-        }
-      }
-
-      .resume-section {
-        margin-top: 3rem;
-        text-align: center;
-        p { font-size: 0.75rem; font-weight: bold; color: #6c757d; }
-        .resume-download-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 50px; height: 50px;
-          border: 2px solid #f2c94c;
-          border-radius: 8px;
-          color: #f2c94c;
-          transition: all 0.3s ease;
-          &:hover { background-color: #f2c94c; color: white; transform: translateY(-3px); }
-        }
-      }
+    .social-handle,
+    .social-arrow {
+      color: var(--bg);
     }
   }
 }
 
-// Responsivo
-@media (max-width: 768px) {
-  .contact-section {
-    flex-direction: column;
-    
-    .left-column {
-      padding: 3rem 2rem;
-      min-height: 40vh;
-      justify-content: center;
-      
-      .info-block {
-        max-width: 100%;
-        text-align: center;
-      }
-    }
-    
-    .right-column {
-      padding: 3rem 1.5rem;
-      justify-content: center;
-      
-      .form-container {
-        max-width: 100%;
-        text-align: center;
-      }
-    }
+.social-name {
+  flex: 1 1 auto;
+  font: 400 clamp(32px, 5vw, 64px) / 1 var(--font-display);
+}
+
+.social-handle {
+  font: 500 14px var(--font-mono);
+  color: var(--muted);
+  transition: color 0.3s ease-out;
+}
+
+.social-arrow {
+  font: 400 22px var(--font-mono);
+  color: var(--gold);
+  transition: color 0.3s ease-out;
+}
+
+// Handle drops under the name; the arrow stays on the right, centered on both
+@media (max-width: 600px) {
+  .social-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 12px;
+  }
+
+  .social-handle {
+    grid-row: 2;
+  }
+
+  .social-arrow {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+}
+
+// MAIL
+
+.contact-or {
+  margin: 40px 0 14px;
+  color: var(--muted);
+}
+
+.mail-copy.is-copied,
+.mail-copy.is-copied:hover {
+  color: var(--bg);
+}
+
+.mail-copy-fill {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease-out);
+
+  .is-copied & {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-row::before,
+  .mail-copy-fill {
+    transition: none;
   }
 }

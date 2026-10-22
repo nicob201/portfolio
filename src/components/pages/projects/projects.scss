@@ -1,0 +1,116 @@
+// Margin, not padding: anchors and page changes land right on the title
+.projects {
+  margin-top: var(--section-gap);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: clamp(20px, 3vw, 40px);
+  padding: clamp(16px, 3vw, 40px);
+  border: 1px solid var(--line-strong);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-strong);
+  background: var(--bg);
+
+  img {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 1px solid var(--line-strong);
+  }
+}
+
+.project-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 22px 24px;
+}
+
+.project-tag {
+  margin-bottom: 6px;
+  font: 500 12px/1.4 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.project-title {
+  margin-bottom: 10px;
+  font: 400 30px/1.1 var(--font-display);
+
+  a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25em;
+    min-height: 44px;
+    color: var(--ink);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--gold);
+    }
+  }
+}
+
+.project-description {
+  color: var(--muted);
+
+  b {
+    font-weight: 600;
+    color: var(--gold);
+  }
+}
+
+// PAGINATION (only rendered when there is more than one page)
+
+.projects-pages {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.projects-page {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: none;
+  font: 500 14px var(--font-mono);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: border-color 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
+
+  &:hover:not(:disabled):not([aria-current="page"]) {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  &[aria-current="page"] {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: var(--bg);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+
+// Pushed to the bottom so the stacks line up across a row
+.project-stack {
+  margin-top: auto;
+  padding-top: 14px;
+  font: 500 12px/1.5 var(--font-mono);
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}

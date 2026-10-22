@@ -1,64 +1,50 @@
 import "./navbar.scss";
-import { FiDownload } from "react-icons/fi";
-import { useEffect, useState } from "react";
 import { useLanguage } from "../../../context/useLanguage";
+import { useCordobaTime } from "../../../hooks/useCordobaTime";
+import { contactData } from "../../../data/contactData";
 
 const Navbar = () => {
-  const { language, toggleLanguage, t } = useLanguage();
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { language, setLanguage, t } = useLanguage();
+  const time = useCordobaTime();
 
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? "scrolled" : ""}`}>
-      <div className="container-fluid navbar-container">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link" href="#home">{t.navbar.home}</a></li>
-            <li className="nav-item"><a className="nav-link" href="#experience">{t.navbar.experience}</a></li>
-            <li className="nav-item"><a className="nav-link" href="#skills">{t.navbar.skills}</a></li>
-            <li className="nav-item"><a className="nav-link" href="#education">{t.navbar.education}</a></li>
-            <li className="nav-item"><a className="nav-link" href="#projects">{t.navbar.projects}</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contact">{t.navbar.contact}</a></li>
-            <li className="nav-item">
-              <button className="btn nav-link" onClick={toggleLanguage}>
-                {language === "en" ? "ES" : "EN"}
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        {/* Fuera del collapse: en mobile queda visible al lado del menu */}
-        <a
-          className="nav-cv"
-          href={t.contact.resumeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FiDownload aria-hidden="true" />
-          {t.navbar.resume}
+    <header className="topbar">
+      <div className="wrap topbar-inner">
+        <a className="topbar-name" href="#inicio">
+          Nicolás Boscasso
         </a>
+
+        <p className="topbar-clock">
+          <span className="status-dot" aria-hidden="true"></span>
+          Córdoba, <time>{time}</time>
+        </p>
+
+        <div className="topbar-actions">
+          <a className="topbar-link" href="#contacto">
+            {t.navbar.write}
+          </a>
+
+          <div className="lang-switch" role="group" aria-label={t.navbar.language}>
+            <button type="button" aria-pressed={language === "es"} onClick={() => setLanguage("es")}>
+              ES
+            </button>
+            <span aria-hidden="true">/</span>
+            <button type="button" aria-pressed={language === "en"} onClick={() => setLanguage("en")}>
+              EN
+            </button>
+          </div>
+
+          <a
+            className="topbar-cv"
+            href={contactData.resumeUrl[language]}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t.navbar.resume}
+          </a>
+        </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
