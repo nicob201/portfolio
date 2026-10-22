@@ -3,6 +3,7 @@
   --bg: #160c28;
   --bg-raised: #1a1030;
   --bg-deep: #0b0618;
+  --bg-hover: #21173a;
   --ink: #e1efe6;
   --ink-soft: #c5cccb;
   --muted: #aeb7b3;
@@ -114,6 +115,15 @@ a {
 
 .hatch {
   background: repeating-linear-gradient(135deg, var(--hatch) 0 1px, transparent 1px 7px);
+}
+
+// Gold "available / live" dot used in the top bar and the hero badge
+.status-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
 }
 
 .sr-only {

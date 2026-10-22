@@ -1,0 +1,56 @@
+.sheet {
+  position: relative;
+  border: 1px solid var(--line-strong);
+}
+
+.sheet-cross {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: var(--gold);
+  }
+
+  &::before {
+    left: 8px;
+    top: 0;
+    width: 1px;
+    height: 17px;
+  }
+
+  &::after {
+    top: 8px;
+    left: 0;
+    width: 17px;
+    height: 1px;
+  }
+
+  &--tl {
+    left: -9px;
+    top: -9px;
+  }
+
+  &--tr {
+    right: -9px;
+    top: -9px;
+  }
+
+  &--bl {
+    left: -9px;
+    bottom: -9px;
+  }
+
+  &--br {
+    right: -9px;
+    bottom: -9px;
+  }
+}
+
+.sheet-band {
+  height: 28px;
+  border-bottom: 1px solid var(--line-strong);
+}
