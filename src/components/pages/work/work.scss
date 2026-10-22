@@ -42,8 +42,9 @@
   min-width: 0;
 }
 
+// Wide enough for "WordPress · A medida" on one line
 .work-where {
-  flex: 1 0 150px;
+  flex: 1 0 176px;
 }
 
 @media (min-width: 900px) {
@@ -108,7 +109,7 @@
     justify-content: flex-end;
     gap: 6px;
     margin: 0 -1px -1px 0;
-    padding: 14px 16px;
+    padding: 14px 12px;
     border-right: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
@@ -120,8 +121,9 @@
     color: var(--muted);
   }
 
+  // Sized so "~42.000" fits a 118px cell
   dd {
-    font: 400 30px/1 var(--font-display);
+    font: 400 clamp(22px, 1.9vw, 26px) / 1 var(--font-display);
     color: var(--gold);
   }
 }

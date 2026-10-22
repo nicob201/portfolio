@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
 import { LanguageProvider } from "./context/LanguageContext";
@@ -11,6 +12,13 @@ import About from "./components/pages/about/About";
 import Contact from "./components/pages/contact/Contact";
 
 function App() {
+  // The browser tries to jump to #section before React has rendered it,
+  // so shared links like /#contacto would stay at the top without this.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (id) document.getElementById(id)?.scrollIntoView();
+  }, []);
+
   return (
     <LanguageProvider>
       <Navbar />

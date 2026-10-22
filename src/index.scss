@@ -135,8 +135,9 @@ a {
   border: 1px solid var(--line-strong);
 }
 
+// Basis wide enough for the full email; below that the action wraps underneath
 .command-box-main {
-  flex: 1 1 220px;
+  flex: 1 1 260px;
   display: flex;
   align-items: center;
   min-height: 48px;

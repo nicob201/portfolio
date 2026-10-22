@@ -111,10 +111,15 @@
   border-left: 1px dashed var(--gold-soft);
 }
 
-// Once tracks sit below their labels the line would cut into the text
 @media (max-width: 730px) {
+  // Once tracks sit below their labels the line would cut into the text
   .gantt-today {
     top: 0;
     bottom: 0;
+  }
+
+  // Year columns get too narrow to share a line with the label
+  .gantt-scale .gantt-today-label {
+    top: -22px;
   }
 }

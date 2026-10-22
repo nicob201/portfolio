@@ -1,5 +1,6 @@
 // Ridge height; the closing line rises 45% of it so the mountains cover its base
-$ridge-height: clamp(70px, 9vw, 140px);
+// Its minimum stays below the closing line's minimum so small screens keep the same proportion
+$ridge-height: clamp(40px, 9vw, 140px);
 
 .footer {
   margin-top: var(--section-gap);
@@ -28,6 +29,11 @@ $ridge-height: clamp(70px, 9vw, 140px);
 
   &:hover {
     color: var(--gold);
+  }
+
+  // At small sizes legibility wins over the sinking effect
+  @media (max-width: 600px) {
+    margin-bottom: calc(#{$ridge-height} * 0.6);
   }
 }
 

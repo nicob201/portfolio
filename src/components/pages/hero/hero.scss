@@ -179,3 +179,10 @@
 .hero-dot {
   color: var(--line-strong);
 }
+
+// The links wrap on phones; a separator would be left hanging at a line end
+@media (max-width: 480px) {
+  .hero-dot {
+    display: none;
+  }
+}
