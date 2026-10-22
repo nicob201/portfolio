@@ -37,14 +37,8 @@
   color: var(--ink-soft);
 }
 
-// Stand-in until the personal paragraph is written
-.about-placeholder {
-  max-width: 58ch;
+.about-body + .about-body {
   margin-top: 16px;
-  padding: 16px 20px;
-  border: 1px dashed var(--line-strong);
-  border-radius: 4px;
-  color: var(--muted);
 }
 
 // Top aligned with the section title next to it

@@ -114,6 +114,4 @@ Fuentes (Google Fonts, cargadas con `<link>` y `preconnect`):
 
 ## Pendiente de Nicolás antes de mergear
 
-- El texto personal de "Sobre mí".
-- Las fechas de Aster Estudio (los datos tienen un comentario que dice que se pusieron a ojo).
-- Revisar el preview de Vercel, incluido `/v1/`.
+- Revisar el preview de Vercel, incluido `/v1/`. (El texto de "Sobre mí" y las fechas de Aster Estudio ya están confirmados.)

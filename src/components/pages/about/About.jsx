@@ -16,7 +16,7 @@ const About = () => {
         </p>
         <p className="about-hand-note">{t.about.handNote}</p>
         <p className="about-body">{t.about.body}</p>
-        <p className="about-placeholder">{t.about.placeholder}</p>
+        <p className="about-body">{t.about.story}</p>
       </div>
 
       <Sheet as="aside" corners="diagonal" className="about-facts" aria-label={t.about.factsLabel}>

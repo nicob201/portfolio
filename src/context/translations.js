@@ -42,8 +42,8 @@ export const translations = {
       statement: "I build **complete products** and learn **whatever the problem needs**.",
       handNote: "from Córdoba, Argentina",
       body: "I live in Córdoba. I speak Spanish and English, with a C2 certificate.",
-      placeholder:
-        "[Outside of code: what you do, what you enjoy, something that makes you recognizable. Two or three lines in first person.]",
+      story:
+        "I started coding in 2021 with a web development course and kept going: SQL, Python, JavaScript, backend, React and then a technical degree. What I enjoy most is taking an idea all the way to production, like I did with DocuAuto.",
       factsLabel: "Facts",
       facts: [
         { label: "Based in", value: "Córdoba, AR" },
@@ -109,8 +109,8 @@ export const translations = {
       statement: "Construyo **productos completos** y aprendo **lo que el problema necesite**.",
       handNote: "desde Córdoba, Argentina",
       body: "Vivo en Córdoba. Hablo español e inglés, con certificado C2.",
-      placeholder:
-        "[Fuera del código: qué hacés, qué te gusta, algo que te haga reconocible. Dos o tres líneas en primera persona.]",
+      story:
+        "Empecé a programar en 2021 con un curso de desarrollo web y no paré: SQL, Python, JavaScript, backend, React y después la tecnicatura. Lo que más disfruto es llevar una idea hasta producción, como hice con DocuAuto.",
       factsLabel: "Datos",
       facts: [
         { label: "Base", value: "Córdoba, AR" },

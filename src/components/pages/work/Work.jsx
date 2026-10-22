@@ -40,12 +40,12 @@ const FeaturedDetails = ({ featured, url, language, t }) => {
         ))}
       </div>
 
-      <div className="command-box work-links">
+      <div className="command-box command-box--featured work-links">
         <a className="command-box-main" href={url} {...EXTERNAL}>
-          {featured.siteLabel}
+          {featured.siteLabel} <span aria-hidden="true">↗</span>
         </a>
         <a className="command-box-action" href={featured.caseStudyUrl} {...EXTERNAL}>
-          {t.work.caseStudy}
+          {t.work.caseStudy} <span aria-hidden="true">↗</span>
         </a>
       </div>
 

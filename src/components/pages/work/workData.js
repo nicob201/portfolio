@@ -1,5 +1,4 @@
-// Work. Aster Estudio dates were set by eye: correct them if needed.
-// **text** in descriptions is rendered bold.
+// Work. **text** in descriptions is rendered bold.
 const CLOUDINARY = "https://res.cloudinary.com/dl73hi4ir/image/upload";
 
 export const workItems = [

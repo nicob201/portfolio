@@ -175,6 +175,35 @@ a {
   }
 }
 
+// Featured variant (DocuAuto links): gold frame, gold link and a filled action
+.command-box--featured {
+  border-color: var(--gold);
+
+  .command-box-main,
+  .command-box-action {
+    gap: 8px;
+  }
+
+  .command-box-main {
+    color: var(--gold);
+
+    &:hover {
+      background: var(--gold-tint);
+    }
+  }
+
+  .command-box-action {
+    box-shadow: -1px -1px 0 var(--gold);
+    background: var(--gold);
+    color: var(--bg);
+
+    &:hover {
+      background: var(--ink);
+      color: var(--bg);
+    }
+  }
+}
+
 // Gold "available / live" dot used in the top bar and the hero badge
 .status-dot {
   flex: none;
