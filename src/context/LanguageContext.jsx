@@ -1,128 +1,6 @@
 import { useState, useEffect } from "react";
 import { LanguageContext } from "./languageContextValue";
-
-const translations = {
-  en: {
-    navbar: {
-      home: "Home",
-      experience: "Experience",
-      skills: "Skills",
-      education: "Education",
-      projects: "Projects",
-      contact: "Contact",
-      resume: "Resume",
-    },
-    about: {
-      title: "FullStack\nDeveloper",
-      description: "Full-stack developer based in Córdoba, Argentina. I designed, built and shipped DocuAuto — a vehicle maintenance SaaS running in production with recurring subscriptions and payments. I work with React, Next.js, Node and PostgreSQL, and I learn whatever the problem needs. Available for remote roles and freelance work.",
-      button: "Let's talk!",
-    },
-    experience: {
-      title: "Experience",
-      present: "Present",
-    },
-    caseStudy: {
-      role: "Role",
-      timeframe: "Timeframe",
-      stack: "Stack",
-      highlights: "Highlights",
-      challenge: "Hardest problem",
-      visitSite: "Visit site",
-      viewCode: "View code",
-      screenshot: "Screenshot of",
-    },
-    skills: {
-      title: "My Skills",
-      cta: "View My Work",
-    },
-    education: {
-      title: "Education",
-      inProgress: "In Progress",
-      downloadPdf: "View certificate:",
-    },
-    projects: {
-      title: "Projects",
-      viewDemo: "View Demo",
-    },
-    contact: {
-      title: "Get in touch!",
-      phoneLabel: "PHONE NUMBER",
-      emailLabel: "E-MAIL",
-      form: {
-        namePlaceholder: "Name",
-        emailPlaceholder: "Enter your email here",
-        messagePlaceholder: "Your message here",
-        sendBtn: "SEND",
-        sendingBtn: "SENDING...",
-      },
-      successMsg: "Message sent! I'll contact you soon!",
-      errorMsg: "Oops! Something went wrong. Please try again later.",
-      captchaMsg: "Please confirm you are not a robot.",
-      resumeCta: "OR... DOWNLOAD MY RESUME HERE!",
-      resumeUrl: "https://drive.google.com/file/d/1nOIM06PxnfakhtQLScbQL3YjiDo8MCcY/view?usp=sharing",
-    },
-  },
-  es: {
-    navbar: {
-      home: "Inicio",
-      experience: "Experiencia",
-      skills: "Habilidades",
-      education: "Educación",
-      projects: "Proyectos",
-      contact: "Contacto",
-      resume: "CV",
-    },
-    about: {
-      title: "Desarrollador\nFullStack",
-      description: "Desarrollador full-stack en Córdoba, Argentina. Diseñé, construí y publiqué DocuAuto: un SaaS de gestión de mantenimiento vehicular en producción, con suscripciones y pagos recurrentes. Trabajo con React, Next.js, Node y PostgreSQL, y aprendo lo que el problema necesite. Disponible para trabajo remoto y freelance.",
-      button: "¡Hablemos!",
-    },
-    experience: {
-      title: "Experiencia",
-      present: "Presente",
-    },
-    caseStudy: {
-      role: "Rol",
-      timeframe: "Duración",
-      stack: "Stack",
-      highlights: "Lo que incluye",
-      challenge: "El problema más difícil",
-      visitSite: "Ver el sitio",
-      viewCode: "Ver código",
-      screenshot: "Captura de",
-    },
-    skills: {
-      title: "Mis Habilidades",
-      cta: "Ver Mis Proyectos",
-    },
-    education: {
-      title: "Educación",
-      inProgress: "En Progreso",
-      downloadPdf: "Ver certificado:",
-    },
-    projects: {
-      title: "Proyectos",
-      viewDemo: "Ver Demo",
-    },
-    contact: {
-      title: "Contacto",
-      phoneLabel: "NÚMERO DE TELÉFONO",
-      emailLabel: "CORREO ELECTRÓNICO",
-      form: {
-        namePlaceholder: "Nombre",
-        emailPlaceholder: "Ingresa tu correo aquí",
-        messagePlaceholder: "Tu mensaje aquí",
-        sendBtn: "ENVIAR",
-        sendingBtn: "ENVIANDO...",
-      },
-      successMsg: "¡Mensaje enviado! ¡Te contactaré pronto!",
-      errorMsg: "¡Ups! Algo salió mal. Por favor, intentá de nuevo más tarde.",
-      captchaMsg: "Por favor confirmá que no sos un robot.",
-      resumeCta: "O... DESCARGÁ MI CURRICULUM ACÁ!",
-      resumeUrl: "https://drive.google.com/file/d/1m00T-nLj-Ud6cG9Rv9290KwYobDFtvuz/view?usp=sharing",
-    },
-  },
-};
+import { translations } from "./translations";
 
 const getInitialLanguage = () => {
   // 1. ?lang= in the URL wins, so the language is shareable
@@ -156,6 +34,7 @@ export const LanguageProvider = ({ children }) => {
 
   const value = {
     language,
+    setLanguage,
     toggleLanguage,
     t: translations[language],
   };

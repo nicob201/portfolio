@@ -1,12 +1,3 @@
-import Navbar from "./components/layout/navbar/Navbar";
-import Footer from "./components/layout/footer/Footer";
-import About from "./components/pages/about/About";
-import ExperienceContainer from "./components/pages/experience/ExperienceContainer";
-import SkillsContainer from "./components/pages/skills/SkillsContainer";
-import EducationContainer from "./components/pages/education/EducationContainer";
-import ProjectsContainer from "./components/pages/myProjects/ProjectsContainer";
-import ContactSection from "./components/pages/contact/ContactContainer";
-
 import { Analytics } from "@vercel/analytics/react";
 
 import { LanguageProvider } from "./context/LanguageContext";
@@ -14,14 +5,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 function App() {
   return (
     <LanguageProvider>
-      <Navbar />
-      <About />
-      <ExperienceContainer />
-      <SkillsContainer />
-      <EducationContainer />
-      <ProjectsContainer />
-      <ContactSection />
-      <Footer />
+      <main></main>
       <Analytics />
     </LanguageProvider>
   );
