@@ -49,8 +49,8 @@ const Hero = () => {
         </p>
 
         <h1 id="hero-name" className="hero-name">
-          Nicolás
-          <br />
+          {/* The space keeps "Nicolás Boscasso" as two words for screen readers */}
+          Nicolás <br />
           Boscasso
         </h1>
 

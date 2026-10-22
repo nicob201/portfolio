@@ -15,7 +15,8 @@ function App() {
   // The browser tries to jump to #section before React has rendered it,
   // so shared links like /#contacto would stay at the top without this.
   useEffect(() => {
-    const id = decodeURIComponent(window.location.hash.slice(1));
+    // Section ids are plain ASCII, so the raw hash is enough (decoding can throw on bad input)
+    const id = window.location.hash.slice(1);
     if (id) document.getElementById(id)?.scrollIntoView();
   }, []);
 
