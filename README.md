@@ -33,6 +33,8 @@ Portfolio personal desarrollado con **React + Vite**.
 
 En las descripciones, `**texto**` se muestra destacado.
 
+Los proyectos van **del más nuevo al más viejo**: agregá los nuevos arriba de todo en `projectsData.js`. La sección muestra 4 por página y el paginado aparece solo cuando hay más de 4.
+
 ## Instalación
 
 ```bash

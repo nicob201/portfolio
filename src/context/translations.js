@@ -29,6 +29,10 @@ export const translations = {
       title: "Projects",
       note: "Challenges, APIs and websites.",
       screenshot: "Screenshot of",
+      pages: "Project pages",
+      page: "Page",
+      previous: "Previous page",
+      next: "Next page",
     },
     education: {
       title: "Education",
@@ -96,6 +100,10 @@ export const translations = {
       title: "Proyectos",
       note: "Challenges, APIs y sitios web.",
       screenshot: "Captura de",
+      pages: "Páginas de proyectos",
+      page: "Página",
+      previous: "Página anterior",
+      next: "Página siguiente",
     },
     education: {
       title: "Estudios",

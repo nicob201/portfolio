@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 56px clamp(40px, 6vw, 96px);
-  padding-top: var(--section-gap);
+  margin-top: var(--section-gap);
 }
 
 .about-text {

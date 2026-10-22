@@ -1,5 +1,5 @@
 .education {
-  padding-top: var(--section-gap);
+  margin-top: var(--section-gap);
 }
 
 .gantt {
@@ -111,15 +111,25 @@
   border-left: 1px dashed var(--gold-soft);
 }
 
+// Phones: the chart becomes a plain list, the degree on top and the rest newest first.
+// Only the visual order changes; the markup stays chronological.
 @media (max-width: 730px) {
-  // Once tracks sit below their labels the line would cut into the text
-  .gantt-today {
-    top: 0;
-    bottom: 0;
+  .gantt-row--scale,
+  .gantt-track {
+    display: none;
   }
 
-  // Year columns get too narrow to share a line with the label
-  .gantt-scale .gantt-today-label {
-    top: -22px;
+  .gantt-list {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  // Highest order = last laid out = top of a column-reverse list
+  .gantt-row--featured {
+    order: 1;
+  }
+
+  .gantt-label {
+    flex-basis: 100%;
   }
 }

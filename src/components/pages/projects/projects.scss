@@ -1,5 +1,6 @@
+// Margin, not padding: anchors and page changes land right on the title
 .projects {
-  padding-top: var(--section-gap);
+  margin-top: var(--section-gap);
 }
 
 .projects-grid {
@@ -64,6 +65,44 @@
   b {
     font-weight: 600;
     color: var(--gold);
+  }
+}
+
+// PAGINATION (only rendered when there is more than one page)
+
+.projects-pages {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.projects-page {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: none;
+  font: 500 14px var(--font-mono);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: border-color 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
+
+  &:hover:not(:disabled):not([aria-current="page"]) {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  &[aria-current="page"] {
+    border-color: var(--gold);
+    background: var(--gold);
+    color: var(--bg);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
   }
 }
 

@@ -19,7 +19,7 @@ const Education = () => {
       <SectionHeader id="estudios-titulo" title={t.education.title} note={t.education.note} />
 
       <div className="gantt" style={{ "--years": years.length }}>
-        <div className="gantt-row" aria-hidden="true">
+        <div className="gantt-row gantt-row--scale" aria-hidden="true">
           <div className="gantt-label"></div>
           <div className="gantt-track gantt-scale">
             {years.map((year) => (
@@ -33,7 +33,7 @@ const Education = () => {
           </div>
         </div>
 
-        <ol>
+        <ol className="gantt-list">
           {educationItems.map((item) => {
             const { left, width } = barPosition(item.start, item.end, timelineRange);
 

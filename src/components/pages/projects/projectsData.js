@@ -1,4 +1,6 @@
-// Projects. Thumbnails are cropped to 2:1 from the top, the same ratio the cards show.
+// Projects, NEWEST FIRST: add new ones at the top. The section shows four per page,
+// so page 1 always holds the latest ones.
+// Thumbnails are cropped to 2:1 from the top, the same ratio the cards show.
 // **text** in descriptions is highlighted in gold.
 const THUMBNAIL = "https://res.cloudinary.com/dl73hi4ir/image/upload/c_fill,g_north,w_800,h_400,f_auto,q_auto";
 
