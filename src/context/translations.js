@@ -28,6 +28,7 @@ export const translations = {
     projects: {
       title: "Projects",
       note: "Challenges, APIs and websites.",
+      screenshot: "Screenshot of",
     },
     education: {
       title: "Education",
@@ -94,6 +95,7 @@ export const translations = {
     projects: {
       title: "Proyectos",
       note: "Challenges, APIs y sitios web.",
+      screenshot: "Captura de",
     },
     education: {
       title: "Estudios",

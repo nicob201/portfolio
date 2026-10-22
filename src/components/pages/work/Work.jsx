@@ -5,8 +5,7 @@ import SectionHeader from "../../common/SectionHeader";
 import Emphasis from "../../common/Emphasis";
 import { workItems } from "./workData";
 import { useLanguage } from "../../../context/useLanguage";
-
-const EXTERNAL = { target: "_blank", rel: "noopener noreferrer" };
+import { EXTERNAL_LINK as EXTERNAL } from "../../../utils/links";
 
 // Metrics, screenshots, links and the hardest problem of the featured row
 const FeaturedDetails = ({ featured, url, language, t }) => {
@@ -80,7 +79,7 @@ const Work = () => {
                 <h3 className="work-title">
                   <a href={item.url} {...EXTERNAL}>
                     {item.title}
-                    <span className="work-arrow" aria-hidden="true">↗</span>
+                    <span className="title-arrow" aria-hidden="true">↗</span>
                   </a>
                 </h3>
                 <p className="work-description">

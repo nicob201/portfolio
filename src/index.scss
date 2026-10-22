@@ -117,6 +117,12 @@ a {
   background: repeating-linear-gradient(135deg, var(--hatch) 0 1px, transparent 1px 7px);
 }
 
+// Small ↗ after linked titles (work rows, project cards)
+.title-arrow {
+  font: 400 0.45em var(--font-mono);
+  color: var(--gold);
+}
+
 // Gold "available / live" dot used in the top bar and the hero badge
 .status-dot {
   flex: none;
