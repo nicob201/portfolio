@@ -63,7 +63,7 @@
   padding: 8px 18px;
   border: 1px solid var(--line-button);
   border-radius: 999px;
-  background: rgba(22, 12, 40, 0.9);
+  background: var(--bg-translucent);
   font: 400 13px/1.4 var(--font-mono);
   color: var(--ink);
 }
@@ -127,7 +127,7 @@
     min-height: 56px;
     padding: 0 26px;
     border-color: var(--gold);
-    background: rgba(239, 203, 104, 0.07);
+    background: var(--gold-tint);
     color: var(--gold);
 
     &:hover {

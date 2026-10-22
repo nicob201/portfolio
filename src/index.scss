@@ -11,8 +11,11 @@
   --line-strong: #4a3b66;
   --line-button: #3a2e55;
   --gold: #efcb68;
+  --bg-translucent: rgba(22, 12, 40, 0.9);
   --gold-soft: rgba(239, 203, 104, 0.7);
   --gold-underline: rgba(239, 203, 104, 0.55);
+  --gold-highlight: rgba(239, 203, 104, 0.38);
+  --gold-tint: rgba(239, 203, 104, 0.07);
   --hatch: rgba(239, 203, 104, 0.2);
 
   --font-display: "Anta", "Arial Narrow", sans-serif;
@@ -122,6 +125,53 @@ a {
 .title-arrow {
   font: 400 0.45em var(--font-mono);
   color: var(--gold);
+}
+
+// Bordered box with a main link and a side action (DocuAuto links, contact mail)
+.command-box {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 560px;
+  border: 1px solid var(--line-strong);
+}
+
+.command-box-main {
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 16px;
+  font: 500 15px var(--font-mono);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+// The shadow draws the divider on the left, or on top once the action wraps below
+.command-box-action {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: 1 0 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 0;
+  box-shadow: -1px -1px 0 var(--line-strong);
+  background: none;
+  font: 600 13px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+
+  &:hover {
+    background: var(--bg-hover);
+    color: var(--gold);
+  }
 }
 
 // Gold "available / live" dot used in the top bar and the hero badge

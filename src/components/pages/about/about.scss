@@ -1,135 +1,83 @@
 .about {
-  width: 100%;
-  // min-height y no height: si el contenido no entra, la seccion crece
-  // en vez de recortarse y meterse abajo de la navbar fija
-  min-height: 100vh;
-  min-height: 100svh;
-  padding: 6rem 0 3rem;
-  color: var(--color3);
   display: flex;
-  align-items: center;
-  overflow-x: hidden;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
-    url("https://res.cloudinary.com/dl73hi4ir/image/upload/f_auto,q_auto,w_1920/v1731873946/12980760_5096154-scaled_jqog7s.jpg");
-}
-
-.about-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  overflow-x: hidden;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 3rem;
-}
-
-/* IMAGEN */
-.about-image {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.about-image img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* TEXTO */
-.about-text {
-  display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: flex-start;
+  gap: 56px clamp(40px, 6vw, 96px);
+  padding-top: var(--section-gap);
 }
 
-.about-name {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--color2);
+.about-text {
+  flex: 999 1 520px;
+  min-width: 0;
 }
 
-.about-title {
-  font-size: clamp(2rem, 4.6vw, 3.75rem);
-  margin: 1rem 0;
-  font-family: "Anta", sans-serif;
-  text-transform: uppercase;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
+.about-statement {
+  max-width: 18ch;
+  font: 400 clamp(32px, 4.4vw, 60px) / 1.12 var(--font-display);
 
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 500px;
-}
-
-.horizontal-row {
-  width: 100px;
-  height: 4px;
-  background-color: var(--color2);
-  border: none;
-  margin: 1.5rem 0;
-}
-
-/* = MOBILE = */
-@media (max-width: 768px) {
-  .about-wrapper {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 0 1.5rem;
-  }
-
-  .about-image {
-    justify-content: center;
-  }
-
-  .about-text {
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .about-title {
-    font-size: 3rem;
-    line-height: 1.1;
-    word-break: break-word;
-  }
-
-  .about-text p {
-    max-width: 100%;
+  // Highlighter stroke across the lower half of the line
+  mark {
+    color: inherit;
+    background: linear-gradient(transparent 58%, var(--gold-highlight) 58% 92%, transparent 92%);
   }
 }
 
-/* = SMALL MOBILE = */
-@media (max-width: 480px) {
-  .about-wrapper {
-    padding: 0 1rem;
-  }
-
-  .about-title {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin: 0.75rem 0;
-  }
-
-  .about-text p {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-  }
-
-  .about-name {
-    font-size: 0.8rem;
-  }
+.about-hand-note {
+  margin-top: 22px;
+  font: 600 clamp(26px, 2.6vw, 36px) / 1 var(--font-hand);
+  color: var(--gold);
+  transform: rotate(-2.5deg);
+  transform-origin: left;
 }
 
-/* = MOBILE MUY CHICO (<=360px) = */
-@media (max-width: 360px) {
-  .about-title {
-    font-size: 1.8rem;
+.about-body {
+  max-width: 58ch;
+  margin-top: 36px;
+  font-size: 18px;
+  color: var(--ink-soft);
+}
+
+// Stand-in until the personal paragraph is written
+.about-placeholder {
+  max-width: 58ch;
+  margin-top: 16px;
+  padding: 16px 20px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 4px;
+  color: var(--muted);
+}
+
+// Top aligned with the section title next to it
+.about-facts {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin-top: clamp(28px, 4vw, 48px);
+
+  dl {
+    padding: 6px 24px 14px;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  dt {
+    font: 500 12px/1.6 var(--font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  dd {
+    text-align: right;
   }
 }

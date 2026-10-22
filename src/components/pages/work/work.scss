@@ -155,39 +155,9 @@
   }
 }
 
+// Hangs from the gallery so both read as one object
 .work-links {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 560px;
   margin-top: -1px;
-  border: 1px solid var(--line-strong);
-
-  a {
-    display: flex;
-    align-items: center;
-    min-height: 48px;
-    padding: 0 16px;
-    text-decoration: none;
-  }
-}
-
-.work-links-site {
-  flex: 1 1 220px;
-  font: 500 15px var(--font-mono);
-}
-
-// The shadow draws the divider on the left, or on top once it wraps below
-.work-links-case {
-  flex: 1 0 132px;
-  justify-content: center;
-  box-shadow: -1px -1px 0 var(--line-strong);
-  font: 600 13px var(--font-mono);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  &:hover {
-    background: var(--bg-hover);
-  }
 }
 
 .work-challenge {
