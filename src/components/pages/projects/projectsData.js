@@ -6,6 +6,18 @@ const THUMBNAIL = "https://res.cloudinary.com/dl73hi4ir/image/upload/c_fill,g_no
 
 const projectsData = [
   {
+    id: "wp-updater",
+    title: { en: "WP Updater", es: "WP Updater" },
+    tag: { en: "Open source", es: "Código abierto" },
+    url: "https://wp-updater-free-site.vercel.app",
+    image: `https://res.cloudinary.com/dl73hi4ir/image/upload/v1792786017/screenshot_jpkqya.png`,
+    description: {
+      en: "Updates WordPress, plugins and themes across many sites over SSH, with a verified database backup before each one. Its landing runs the **real tool live in the browser**.",
+      es: "Actualiza WordPress, plugins y temas en muchos sitios por SSH, con una copia verificada de la base de datos antes de cada uno. Su landing corre la **herramienta real en vivo en el navegador**.",
+    },
+    stack: ["Node.js", "Bash", "Docker", "WP-CLI", "JavaScript"],
+  },
+  {
     id: "twitter-clone",
     title: { en: "Twitter/X clone", es: "Clon de Twitter/X" },
     tag: { en: "AI challenge", es: "Challenge de IA" },
