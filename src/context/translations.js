@@ -4,7 +4,7 @@ export const translations = {
     navbar: {
       write: "Write to me",
       language: "Language",
-      resume: "CV",
+      resume: "Resume",
     },
     hero: {
       eyebrow: "Engineering & digital product",
@@ -45,7 +45,7 @@ export const translations = {
       title: "About me",
       statement: "I build **complete products** and learn **whatever the problem needs**.",
       handNote: "from Córdoba, Argentina",
-      body: "I live in Córdoba. I speak Spanish and English, with a C2 certificate.",
+      body: "I speak Spanish and English, with a C2 certificate.",
       story:
         "I started coding in 2021 with a web development course and kept going: SQL, Python, JavaScript, backend, React and then a technical degree. What I enjoy most is taking an idea all the way to production, like I did with DocuAuto.",
       factsLabel: "Facts",
@@ -116,7 +116,7 @@ export const translations = {
       title: "Sobre mí",
       statement: "Construyo **productos completos** y aprendo **lo que el problema necesite**.",
       handNote: "desde Córdoba, Argentina",
-      body: "Vivo en Córdoba. Hablo español e inglés, con certificado C2.",
+      body: "Hablo español e inglés, con certificado C2.",
       story:
         "Empecé a programar en 2021 con un curso de desarrollo web y no paré: SQL, Python, JavaScript, backend, React y después la tecnicatura. Lo que más disfruto es llevar una idea hasta producción, como hice con DocuAuto.",
       factsLabel: "Datos",

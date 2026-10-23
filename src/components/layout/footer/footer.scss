@@ -75,18 +75,8 @@ $ridge-height: clamp(40px, 9vw, 140px);
 }
 
 .footer-versions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0 16px;
   font: 500 13px var(--font-mono);
   letter-spacing: 0.04em;
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 20px;
-  }
 
   a,
   li > span {
