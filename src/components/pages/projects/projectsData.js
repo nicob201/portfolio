@@ -6,6 +6,18 @@ const THUMBNAIL = "https://res.cloudinary.com/dl73hi4ir/image/upload/c_fill,g_no
 
 const projectsData = [
   {
+    id: "vitrina",
+    title: { en: "vitrina", es: "vitrina" },
+    tag: { en: "Open source", es: "Código abierto" },
+    url: "https://vitrina.nicolasboscasso.workers.dev/",
+    image: "https://vitrina.nicolasboscasso.workers.dev/og.png",
+    description: {
+      en: "Turns an old Android phone into a desk display: clock, weather, GitHub activity, Claude usage and photos, fed by your Mac. **No accounts, no cloud**, paired over adb with an encrypted, certificate-pinned connection.",
+      es: "Convierte un Android viejo en un display de escritorio: reloj, clima, actividad de GitHub, uso de Claude y fotos, alimentado por tu Mac. **Sin cuentas ni nube**, con pairing por adb y conexión cifrada con certificado fijado.",
+    },
+    stack: ["Python", "Kotlin", "Android", "JavaScript", "adb"],
+  },
+  {
     id: "wp-updater",
     title: { en: "WP Updater", es: "WP Updater" },
     tag: { en: "Open source", es: "Código abierto" },
