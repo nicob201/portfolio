@@ -18,6 +18,18 @@ const projectsData = [
     stack: ["Python", "Kotlin", "Android", "JavaScript", "adb"],
   },
   {
+    id: "coronateonline",
+    title: { en: "CoronaTeOnline", es: "CoronaTeOnline" },
+    tag: { en: "Web app", es: "App web" },
+    url: "https://coronateonline.vercel.app",
+    image: "https://coronateonline.vercel.app/opengraph-image",
+    description: {
+      en: "A status market: you pay more than the current holder to take absurd, unique titles like **King of Córdoba**. **Real-time** prices and a kingdom map, with atomic Postgres RPCs and bots that keep the realm alive. Try it as a guest in one click.",
+      es: "Un mercado de estatus: pagás más que el que lo tiene para quedarte con títulos únicos y absurdos como **Rey de Córdoba**. Precios y mapa del reino **en tiempo real**, con RPC atómicos en Postgres y bots que mantienen vivo el reino. Probalo como invitado con un clic.",
+    },
+    stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Tailwind"],
+  },
+  {
     id: "wp-updater",
     title: { en: "WP Updater", es: "WP Updater" },
     tag: { en: "Open source", es: "Código abierto" },
